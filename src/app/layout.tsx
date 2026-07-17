@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { AppThemeProvider } from "@/theme/AppThemeProvider";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import "./globals.css";
 
 const inter = Inter({
@@ -28,6 +29,7 @@ export default function RootLayout({
     <html lang="vi" className={`${inter.variable} h-full`}>
       <body className={`${inter.className} min-h-full antialiased`}>
         <AppThemeProvider>{children}</AppThemeProvider>
+        <SpeedInsights />
       </body>
     </html>
   );
