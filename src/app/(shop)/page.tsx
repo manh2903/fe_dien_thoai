@@ -12,7 +12,11 @@ import { Pagination } from "@/components/Pagination";
 import { HeroSection } from "@/components/HeroSection";
 import { FeaturesBanner } from "@/components/FeaturesBanner";
 import { CtaSection } from "@/components/CtaSection";
+import { FeedbackCarousel } from "@/components/FeedbackCarousel";
+import { pickRandomFeedbacks } from "@/lib/feedbacks";
+import feedbacksData from "@/data/feedbacks.json";
 import type { Product, ContactLink } from "@/types/database";
+import type { Feedback } from "@/lib/feedbacks";
 
 const PAGE_SIZE = 12;
 
@@ -46,20 +50,23 @@ export default async function HomePage({ searchParams }: PageProps) {
   const totalPages = Math.ceil((count ?? 0) / PAGE_SIZE);
   const hotline =
     contactLinks.find((l) => l.icon === "phone") ?? contactLinks[0] ?? null;
+  const randomFeedbacks = pickRandomFeedbacks(feedbacksData as Feedback[]);
 
   return (
     <>
       <HeroSection hotline={hotline} />
       <FeaturesBanner />
-      <Box component="section" id="products" sx={{ py: 6 }}>
-        <Container maxWidth="xl">
+      <Box component="section" id="products" sx={{ py: { xs: 4, md: 6 } }}>
+        <Container maxWidth="xl" sx={{ px: { xs: 2, sm: 3 } }}>
           <Stack
-            direction="row"
+            direction={{ xs: "column", sm: "row" }}
+            spacing={1}
             sx={{
-              alignItems: "flex-end",
+              alignItems: { xs: "flex-start", sm: "flex-end" },
               justifyContent: "space-between",
-              mb: 6
-            }}>
+              mb: { xs: 4, md: 6 },
+            }}
+          >
             <Box>
               <Typography
                 variant="overline"
@@ -68,9 +75,13 @@ export default async function HomePage({ searchParams }: PageProps) {
               >
                 Cửa hàng
               </Typography>
-              <Typography variant="h3" sx={{
-                fontWeight: 600
-              }}>
+              <Typography
+                variant="h3"
+                sx={{
+                  fontWeight: 600,
+                  fontSize: { xs: "1.5rem", md: "2rem" },
+                }}
+              >
                 Sản phẩm nổi bật
               </Typography>
             </Box>
@@ -130,6 +141,9 @@ export default async function HomePage({ searchParams }: PageProps) {
           )}
         </Container>
       </Box>
+
+      <FeedbackCarousel feedbacks={randomFeedbacks} />
+
       <CtaSection links={contactLinks} />
       {contactLinks.length > 0 && (
         <ContactLinks links={contactLinks} variant="floating" />

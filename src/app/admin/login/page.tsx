@@ -60,7 +60,7 @@ export default function AdminLoginPage() {
         sx={{
           width: "100%",
           maxWidth: 420,
-          p: 4,
+          p: { xs: 3, sm: 4 },
           borderRadius: 4,
           border: 1,
           borderColor: "divider",

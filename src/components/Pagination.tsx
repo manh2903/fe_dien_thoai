@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { Box, Pagination as MuiPagination } from "@mui/material";
+import { Box, Pagination as MuiPagination, useMediaQuery, useTheme } from "@mui/material";
 
 interface PaginationProps {
   currentPage: number;
@@ -14,23 +14,30 @@ export function Pagination({
   totalPages,
   basePath,
 }: PaginationProps) {
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
+
   if (totalPages <= 1) return null;
 
+  const itemSize = isMobile ? 36 : 40;
+
   return (
-    <Box sx={{ display: "flex", justifyContent: "center" }}>
+    <Box sx={{ display: "flex", justifyContent: "center", overflowX: "auto", px: 1 }}>
       <MuiPagination
         page={currentPage}
         count={totalPages}
         color="secondary"
         shape="rounded"
-        size="large"
+        size={isMobile ? "medium" : "large"}
+        siblingCount={isMobile ? 0 : 1}
+        boundaryCount={isMobile ? 1 : 1}
         renderItem={(item) => {
           if (item.type === "start-ellipsis" || item.type === "end-ellipsis") {
             return (
               <Box
                 sx={{
-                  minWidth: 40,
-                  height: 40,
+                  minWidth: itemSize,
+                  height: itemSize,
                   display: "inline-flex",
                   alignItems: "center",
                   justifyContent: "center",
@@ -62,8 +69,8 @@ export function Pagination({
             return (
               <Box
                 sx={{
-                  minWidth: 40,
-                  height: 40,
+                  minWidth: itemSize,
+                  height: itemSize,
                   display: "inline-flex",
                   alignItems: "center",
                   justifyContent: "center",
@@ -84,15 +91,15 @@ export function Pagination({
               component={Link}
               href={href}
               sx={{
-                minWidth: 40,
-                height: 40,
+                minWidth: itemSize,
+                height: itemSize,
                 display: "inline-flex",
                 alignItems: "center",
                 justifyContent: "center",
                 borderRadius: 2,
                 textDecoration: "none",
                 fontWeight: item.selected ? 700 : 500,
-                fontSize: 14,
+                fontSize: isMobile ? 13 : 14,
                 bgcolor: item.selected ? "secondary.main" : "transparent",
                 color: item.selected ? "#fff" : "text.primary",
                 border: item.selected ? "none" : "1px solid",

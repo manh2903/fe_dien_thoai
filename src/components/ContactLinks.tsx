@@ -55,7 +55,12 @@ export function ContactLinks({ links, variant = "footer" }: ContactLinksProps) {
     return (
       <Stack
         spacing={2}
-        sx={{ position: "fixed", bottom: 32, right: 32, zIndex: 100 }}
+        sx={{
+          position: "fixed",
+          bottom: { xs: 16, md: 32 },
+          right: { xs: 16, md: 32 },
+          zIndex: 100,
+        }}
       >
         {links.map((link) => {
           const Icon = iconMap[link.icon] ?? LinkIcon;
@@ -69,6 +74,8 @@ export function ContactLinks({ links, variant = "footer" }: ContactLinksProps) {
                 rel="noopener noreferrer"
                 size="medium"
                 sx={{
+                  width: { xs: 48, md: 56 },
+                  height: { xs: 48, md: 56 },
                   bgcolor: bg,
                   color: "#fff",
                   boxShadow: 3,

@@ -14,6 +14,11 @@ export const metadata: Metadata = {
   description: "Cửa hàng điện thoại uy tín - máy mới, máy cũ chất lượng",
 };
 
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{

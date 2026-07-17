@@ -8,6 +8,7 @@ import {
   Table,
   TableBody,
   TableCell,
+  TableContainer,
   TableHead,
   TableRow,
   Typography,
@@ -44,16 +45,19 @@ export default async function AdminProductsPage({ searchParams }: PageProps) {
   return (
     <Box sx={{ p: { xs: 2, md: 4 } }}>
       <Stack
-        direction="row"
+        direction={{ xs: "column", sm: "row" }}
+        spacing={2}
         sx={{
-          alignItems: "center",
+          alignItems: { xs: "stretch", sm: "center" },
           justifyContent: "space-between",
-          mb: 3
-        }}>
+          mb: 3,
+        }}
+      >
         <Box>
-          <Typography variant="h5" sx={{
-            fontWeight: 700
-          }}>
+          <Typography
+            variant="h5"
+            sx={{ fontWeight: 700, fontSize: { xs: "1.25rem", md: "1.5rem" } }}
+          >
             Quản lý sản phẩm
           </Typography>
           {count != null && (
@@ -69,6 +73,8 @@ export default async function AdminProductsPage({ searchParams }: PageProps) {
             variant="contained"
             color="secondary"
             startIcon={<AddIcon />}
+            fullWidth
+            sx={{ width: { xs: "100%", sm: "auto" } }}
           >
             Thêm sản phẩm
           </Button>
@@ -97,33 +103,42 @@ export default async function AdminProductsPage({ searchParams }: PageProps) {
             elevation={0}
             sx={{ border: 1, borderColor: "divider", borderRadius: 3, overflow: "hidden" }}
           >
-            <Table size="small">
-              <TableHead sx={{ bgcolor: "#F8FAFC" }}>
-                <TableRow>
-                  <TableCell>Tên</TableCell>
-                  <TableCell>Hãng</TableCell>
-                  <TableCell>Giá</TableCell>
-                  <TableCell>Trạng thái</TableCell>
-                  <TableCell>Thao tác</TableCell>
-                </TableRow>
-              </TableHead>
-              <TableBody>
-                {(products as Product[]).map((product) => (
-                  <TableRow key={product.id} hover>
-                    <TableCell>
-                      <Typography sx={{
-                        fontWeight: 600
-                      }}>{product.name}</Typography>
+            <TableContainer sx={{ overflowX: "auto" }}>
+              <Table size="small" sx={{ minWidth: 640 }}>
+                <TableHead sx={{ bgcolor: "#F8FAFC" }}>
+                  <TableRow>
+                    <TableCell>Tên</TableCell>
+                    <TableCell sx={{ display: { xs: "none", sm: "table-cell" } }}>
+                      Hãng
                     </TableCell>
-                    <TableCell>{product.brand}</TableCell>
-                    <TableCell>{formatPrice(product.price)}</TableCell>
-                    <TableCell>
-                      <Chip
-                        size="small"
-                        label={product.is_active ? "Hiển thị" : "Ẩn"}
-                        color={product.is_active ? "success" : "default"}
-                      />
+                    <TableCell>Giá</TableCell>
+                    <TableCell sx={{ display: { xs: "none", md: "table-cell" } }}>
+                      Trạng thái
                     </TableCell>
+                    <TableCell>Thao tác</TableCell>
+                  </TableRow>
+                </TableHead>
+                <TableBody>
+                  {(products as Product[]).map((product) => (
+                    <TableRow key={product.id} hover>
+                      <TableCell sx={{ maxWidth: { xs: 140, sm: 220 } }}>
+                        <Typography sx={{ fontWeight: 600, wordBreak: "break-word" }}>
+                          {product.name}
+                        </Typography>
+                      </TableCell>
+                      <TableCell sx={{ display: { xs: "none", sm: "table-cell" } }}>
+                        {product.brand}
+                      </TableCell>
+                      <TableCell sx={{ whiteSpace: "nowrap" }}>
+                        {formatPrice(product.price)}
+                      </TableCell>
+                      <TableCell sx={{ display: { xs: "none", md: "table-cell" } }}>
+                        <Chip
+                          size="small"
+                          label={product.is_active ? "Hiển thị" : "Ẩn"}
+                          color={product.is_active ? "success" : "default"}
+                        />
+                      </TableCell>
                     <TableCell>
                       <Stack direction="row" spacing={1} sx={{
                         alignItems: "center"
@@ -147,6 +162,7 @@ export default async function AdminProductsPage({ searchParams }: PageProps) {
                 ))}
               </TableBody>
             </Table>
+            </TableContainer>
           </Paper>
 
           {totalPages > 1 && (

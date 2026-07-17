@@ -21,12 +21,12 @@ export function CtaSection({ links }: CtaSectionProps) {
   const zalo = links.find((l) => l.icon === "zalo");
 
   return (
-    <Container maxWidth="xl" sx={{ py: 6, mb: 8 }}>
+    <Container maxWidth="xl" sx={{ py: { xs: 4, md: 6 }, mb: { xs: 4, md: 8 }, px: { xs: 2, sm: 3 } }}>
       <Box
         sx={{
           bgcolor: "primary.main",
-          borderRadius: 8,
-          p: { xs: 4, md: 6 },
+          borderRadius: { xs: 4, md: 8 },
+          p: { xs: 3, sm: 4, md: 6 },
           position: "relative",
           overflow: "hidden",
           display: "flex",
@@ -64,7 +64,7 @@ export function CtaSection({ links }: CtaSectionProps) {
           <Typography
             sx={{
               color: "rgba(255,255,255,0.65)",
-              fontSize: 18,
+              fontSize: { xs: 16, md: 18 },
               mb: 4,
               maxWidth: 480,
             }}
@@ -72,16 +72,24 @@ export function CtaSection({ links }: CtaSectionProps) {
             Liên hệ ngay để nhận báo giá tốt nhất và các chương trình khuyến mãi
             độc quyền chỉ có tại PhoneShop.
           </Typography>
-          <Stack direction="row" spacing={2} useFlexGap sx={{
-            flexWrap: "wrap"
-          }}>
+          <Stack
+            direction={{ xs: "column", sm: "row" }}
+            spacing={2}
+            useFlexGap
+            sx={{ flexWrap: "wrap", width: "100%" }}
+          >
             <Button
               component="a"
               href={phone?.url ?? "tel:0123456789"}
               variant="contained"
               color="secondary"
               startIcon={<CallIcon />}
-              sx={{ px: 4, py: 1.75, borderRadius: 3 }}
+              sx={{
+                px: 4,
+                py: 1.75,
+                borderRadius: 3,
+                width: { xs: "100%", sm: "auto" },
+              }}
             >
               Gọi Hotline
             </Button>
@@ -96,6 +104,7 @@ export function CtaSection({ links }: CtaSectionProps) {
                 px: 4,
                 py: 1.75,
                 borderRadius: 3,
+                width: { xs: "100%", sm: "auto" },
                 borderColor: "rgba(255,255,255,0.2)",
                 color: "#fff",
                 bgcolor: "rgba(255,255,255,0.1)",
@@ -115,18 +124,24 @@ export function CtaSection({ links }: CtaSectionProps) {
           sx={{
             position: "relative",
             zIndex: 1,
-            width: 192,
-            height: 192,
+            width: { xs: 120, sm: 160, md: 192 },
+            height: { xs: 120, sm: 160, md: 192 },
             borderRadius: "50%",
             bgcolor: "rgba(255,255,255,0.05)",
             border: "1px solid rgba(255,255,255,0.1)",
-            display: "flex",
+            display: { xs: "none", sm: "flex" },
             alignItems: "center",
             justifyContent: "center",
             flexShrink: 0,
+            mx: "auto",
           }}
         >
-          <SmartphoneIcon sx={{ fontSize: 64, color: "rgba(255,255,255,0.5)" }} />
+          <SmartphoneIcon
+            sx={{
+              fontSize: { xs: 48, md: 64 },
+              color: "rgba(255,255,255,0.5)",
+            }}
+          />
         </Box>
       </Box>
     </Container>

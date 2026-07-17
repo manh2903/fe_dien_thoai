@@ -7,9 +7,26 @@ export default function DashboardLayout({
   children: React.ReactNode;
 }) {
   return (
-    <Box sx={{ display: "flex", minHeight: "100vh", bgcolor: "#F8FAFC" }}>
+    <Box
+      sx={{
+        display: "flex",
+        flexDirection: { xs: "column", md: "row" },
+        minHeight: "100vh",
+        bgcolor: "#F8FAFC",
+      }}
+    >
       <AdminNav />
-      <Box sx={{ flex: 1, overflow: "auto" }}>{children}</Box>
+      <Box
+        component="main"
+        sx={{
+          flex: 1,
+          overflow: "auto",
+          minWidth: 0,
+          pb: { xs: 2, md: 0 },
+        }}
+      >
+        {children}
+      </Box>
     </Box>
   );
 }

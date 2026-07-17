@@ -24,7 +24,7 @@ interface ProductDetailProps {
 
 export function ProductDetail({ product: p }: ProductDetailProps) {
   return (
-    <Container maxWidth="xl" sx={{ py: 4 }}>
+    <Container maxWidth="xl" sx={{ py: { xs: 2, md: 4 }, px: { xs: 2, sm: 3 } }}>
       <Button
         component={Link}
         href="/"
@@ -87,8 +87,10 @@ export function ProductDetail({ product: p }: ProductDetailProps) {
               sx={{
                 fontWeight: 700,
                 mt: 0.5,
-                mb: 2
-              }}>
+                mb: 2,
+                fontSize: { xs: "1.5rem", sm: "1.75rem", md: "2rem" },
+              }}
+            >
               {p.name}
             </Typography>
 
@@ -106,7 +108,7 @@ export function ProductDetail({ product: p }: ProductDetailProps) {
               sx={{
                 color: "price.main",
                 fontWeight: 700,
-                fontSize: 36,
+                fontSize: { xs: 28, sm: 32, md: 36 },
                 letterSpacing: "-0.02em",
                 mb: 3,
               }}
@@ -194,7 +196,11 @@ export function ProductDetail({ product: p }: ProductDetailProps) {
               Liên hệ qua Hotline / Zalo để đặt hàng và được tư vấn.
             </Alert>
 
-            <Stack direction="row" spacing={2}>
+            <Stack
+              direction={{ xs: "column", sm: "row" }}
+              spacing={2}
+              sx={{ width: "100%" }}
+            >
               <Button
                 component="a"
                 href="tel:0123456789"
@@ -202,10 +208,19 @@ export function ProductDetail({ product: p }: ProductDetailProps) {
                 color="secondary"
                 startIcon={<CallIcon />}
                 size="large"
+                fullWidth
+                sx={{ width: { xs: "100%", sm: "auto" } }}
               >
                 Gọi tư vấn
               </Button>
-              <Button component={Link} href="/#contact" variant="outlined" size="large">
+              <Button
+                component={Link}
+                href="/#contact"
+                variant="outlined"
+                size="large"
+                fullWidth
+                sx={{ width: { xs: "100%", sm: "auto" } }}
+              >
                 Xem liên hệ
               </Button>
             </Stack>

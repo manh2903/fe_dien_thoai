@@ -72,7 +72,7 @@ export function HeroSection({ hotline }: HeroSectionProps) {
           }}
         />
       </Box>
-      <Container maxWidth="xl" sx={{ position: "relative" }}>
+      <Container maxWidth="xl" sx={{ position: "relative", px: { xs: 2, sm: 3 } }}>
         <Stack
           direction={{ xs: "column", md: "row" }}
           spacing={6}
@@ -94,7 +94,7 @@ export function HeroSection({ hotline }: HeroSectionProps) {
             </Typography>
             <Typography
               sx={{
-                fontSize: 18,
+                fontSize: { xs: 16, md: 18 },
                 lineHeight: 1.6,
                 color: "rgba(255,255,255,0.7)",
                 maxWidth: 480,
@@ -106,24 +106,24 @@ export function HeroSection({ hotline }: HeroSectionProps) {
             </Typography>
 
             <Stack
-              direction="row"
+              direction={{ xs: "column", sm: "row" }}
               spacing={2}
               useFlexGap
-              sx={{
-                flexWrap: "wrap",
-                mb: 5
-              }}>
+              sx={{ flexWrap: "wrap", mb: 5, width: { xs: "100%", sm: "auto" } }}
+            >
               <Button
                 component={Link}
                 href="#products"
                 variant="contained"
+                fullWidth={false}
                 sx={{
                   bgcolor: "#fff",
                   color: "primary.main",
-                  px: 4,
+                  px: { xs: 3, md: 4 },
                   py: 1.75,
                   borderRadius: 3,
                   boxShadow: 3,
+                  width: { xs: "100%", sm: "auto" },
                   "&:hover": { bgcolor: "#F8FAFC" },
                 }}
               >
@@ -137,9 +137,10 @@ export function HeroSection({ hotline }: HeroSectionProps) {
                 sx={{
                   borderColor: "rgba(255,255,255,0.3)",
                   color: "#fff",
-                  px: 4,
+                  px: { xs: 3, md: 4 },
                   py: 1.75,
                   borderRadius: 3,
+                  width: { xs: "100%", sm: "auto" },
                   "&:hover": { bgcolor: "rgba(255,255,255,0.1)", borderColor: "#fff" },
                 }}
               >
@@ -147,11 +148,15 @@ export function HeroSection({ hotline }: HeroSectionProps) {
               </Button>
             </Stack>
 
-            <Stack direction="row" spacing={4} sx={{
-              alignItems: "center"
-            }}>
+            <Stack
+              direction="row"
+              spacing={{ xs: 3, md: 4 }}
+              sx={{ alignItems: "center", flexWrap: "wrap" }}
+            >
               <Box>
-                <Typography sx={{ fontSize: 32, fontWeight: 700 }}>10K+</Typography>
+                <Typography sx={{ fontSize: { xs: 24, md: 32 }, fontWeight: 700 }}>
+                  10K+
+                </Typography>
                 <Typography
                   variant="overline"
                   sx={{ color: "rgba(255,255,255,0.6)" }}
@@ -168,7 +173,9 @@ export function HeroSection({ hotline }: HeroSectionProps) {
                 }}
               />
               <Box>
-                <Typography sx={{ fontSize: 32, fontWeight: 700 }}>12 Thg</Typography>
+                <Typography sx={{ fontSize: { xs: 24, md: 32 }, fontWeight: 700 }}>
+                  12 Thg
+                </Typography>
                 <Typography
                   variant="overline"
                   sx={{ color: "rgba(255,255,255,0.6)" }}
@@ -200,10 +207,10 @@ export function HeroSection({ hotline }: HeroSectionProps) {
               <Box
                 sx={{
                   position: "absolute",
-                  bottom: 24,
-                  left: 24,
-                  right: 24,
-                  p: 2,
+                  bottom: { xs: 12, md: 24 },
+                  left: { xs: 12, md: 24 },
+                  right: { xs: 12, md: 24 },
+                  p: { xs: 1.5, md: 2 },
                   bgcolor: "rgba(255,255,255,0.1)",
                   backdropFilter: "blur(12px)",
                   borderRadius: 4,

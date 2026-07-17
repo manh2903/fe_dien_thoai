@@ -8,6 +8,7 @@ import {
   Table,
   TableBody,
   TableCell,
+  TableContainer,
   TableHead,
   TableRow,
   Typography,
@@ -43,16 +44,19 @@ export default async function AdminLinksPage({ searchParams }: PageProps) {
   return (
     <Box sx={{ p: { xs: 2, md: 4 } }}>
       <Stack
-        direction="row"
+        direction={{ xs: "column", sm: "row" }}
+        spacing={2}
         sx={{
-          alignItems: "center",
+          alignItems: { xs: "stretch", sm: "center" },
           justifyContent: "space-between",
-          mb: 3
-        }}>
+          mb: 3,
+        }}
+      >
         <Box>
-          <Typography variant="h5" sx={{
-            fontWeight: 700
-          }}>
+          <Typography
+            variant="h5"
+            sx={{ fontWeight: 700, fontSize: { xs: "1.25rem", md: "1.5rem" } }}
+          >
             Quản lý link liên hệ
           </Typography>
           {count != null && (
@@ -68,6 +72,7 @@ export default async function AdminLinksPage({ searchParams }: PageProps) {
             variant="contained"
             color="secondary"
             startIcon={<AddIcon />}
+            sx={{ width: { xs: "100%", sm: "auto" } }}
           >
             Thêm link
           </Button>
@@ -96,46 +101,61 @@ export default async function AdminLinksPage({ searchParams }: PageProps) {
             elevation={0}
             sx={{ border: 1, borderColor: "divider", borderRadius: 3, overflow: "hidden" }}
           >
-            <Table size="small">
-              <TableHead sx={{ bgcolor: "#F8FAFC" }}>
-                <TableRow>
-                  <TableCell>Tiêu đề</TableCell>
-                  <TableCell>URL</TableCell>
-                  <TableCell>Icon</TableCell>
-                  <TableCell>Thứ tự</TableCell>
-                  <TableCell>Trạng thái</TableCell>
-                  <TableCell>Thao tác</TableCell>
-                </TableRow>
-              </TableHead>
-              <TableBody>
-                {(links as ContactLink[]).map((link) => (
-                  <TableRow key={link.id} hover>
-                    <TableCell>
-                      <Typography sx={{
-                        fontWeight: 600
-                      }}>{link.title}</Typography>
+            <TableContainer sx={{ overflowX: "auto" }}>
+              <Table size="small" sx={{ minWidth: 720 }}>
+                <TableHead sx={{ bgcolor: "#F8FAFC" }}>
+                  <TableRow>
+                    <TableCell>Tiêu đề</TableCell>
+                    <TableCell sx={{ display: { xs: "none", md: "table-cell" } }}>
+                      URL
                     </TableCell>
-                    <TableCell
-                      sx={{
-                        maxWidth: 240,
-                        overflow: "hidden",
-                        textOverflow: "ellipsis",
-                        whiteSpace: "nowrap",
-                      }}
-                    >
-                      {link.url}
+                    <TableCell sx={{ display: { xs: "none", sm: "table-cell" } }}>
+                      Icon
                     </TableCell>
-                    <TableCell sx={{ textTransform: "capitalize" }}>
-                      {link.icon}
+                    <TableCell sx={{ display: { xs: "none", lg: "table-cell" } }}>
+                      Thứ tự
                     </TableCell>
-                    <TableCell>{link.sort_order}</TableCell>
-                    <TableCell>
-                      <Chip
-                        size="small"
-                        label={link.is_active ? "Hiển thị" : "Ẩn"}
-                        color={link.is_active ? "success" : "default"}
-                      />
+                    <TableCell sx={{ display: { xs: "none", md: "table-cell" } }}>
+                      Trạng thái
                     </TableCell>
+                    <TableCell>Thao tác</TableCell>
+                  </TableRow>
+                </TableHead>
+                <TableBody>
+                  {(links as ContactLink[]).map((link) => (
+                    <TableRow key={link.id} hover>
+                      <TableCell>
+                        <Typography sx={{ fontWeight: 600 }}>{link.title}</Typography>
+                      </TableCell>
+                      <TableCell
+                        sx={{
+                          display: { xs: "none", md: "table-cell" },
+                          maxWidth: 240,
+                          overflow: "hidden",
+                          textOverflow: "ellipsis",
+                          whiteSpace: "nowrap",
+                        }}
+                      >
+                        {link.url}
+                      </TableCell>
+                      <TableCell
+                        sx={{
+                          display: { xs: "none", sm: "table-cell" },
+                          textTransform: "capitalize",
+                        }}
+                      >
+                        {link.icon}
+                      </TableCell>
+                      <TableCell sx={{ display: { xs: "none", lg: "table-cell" } }}>
+                        {link.sort_order}
+                      </TableCell>
+                      <TableCell sx={{ display: { xs: "none", md: "table-cell" } }}>
+                        <Chip
+                          size="small"
+                          label={link.is_active ? "Hiển thị" : "Ẩn"}
+                          color={link.is_active ? "success" : "default"}
+                        />
+                      </TableCell>
                     <TableCell>
                       <Stack direction="row" spacing={1} sx={{
                         alignItems: "center"
@@ -159,6 +179,7 @@ export default async function AdminLinksPage({ searchParams }: PageProps) {
                 ))}
               </TableBody>
             </Table>
+            </TableContainer>
           </Paper>
 
           {totalPages > 1 && (

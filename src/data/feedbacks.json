@@ -1,0 +1,1802 @@
+[
+  {
+    "id": 1,
+    "name": "Nguyễn Văn An",
+    "rating": 5,
+    "content": "Mua máy ở đây rất hài lòng, giá tốt hơn nhiều chỗ khác. Nhân viên tư vấn nhiệt tình.",
+    "product": "iPhone 15 Pro Max",
+    "city": "Hà Nội",
+    "date": "2024-02-02"
+  },
+  {
+    "id": 2,
+    "name": "Trần Thị Bình",
+    "rating": 5,
+    "content": "Máy mới nguyên seal, bảo hành đầy đủ. Giao hàng nhanh trong ngày, rất uy tín.",
+    "product": "Samsung S24 Ultra",
+    "city": "TP.HCM",
+    "date": "2024-03-03"
+  },
+  {
+    "id": 3,
+    "name": "Lê Hoàng Cường",
+    "rating": 5,
+    "content": "Lần thứ 3 mua điện thoại tại PhoneShop, luôn tin tưởng chất lượng.",
+    "product": "Xiaomi 14",
+    "city": "Đà Nẵng",
+    "date": "2024-04-04"
+  },
+  {
+    "id": 4,
+    "name": "Phạm Thị Dung",
+    "rating": 5,
+    "content": "Tư vấn kỹ, giá cả hợp lý. Máy dùng rất mượt, pin tốt.",
+    "product": "iPhone 14",
+    "city": "Hải Phòng",
+    "date": "2024-05-05"
+  },
+  {
+    "id": 5,
+    "name": "Hoàng Minh Em",
+    "rating": 5,
+    "content": "Shop uy tín, đổi trả nhanh khi có vấn đề nhỏ. Rất hài lòng.",
+    "product": "Galaxy A55",
+    "city": "Cần Thơ",
+    "date": "2024-06-06"
+  },
+  {
+    "id": 6,
+    "name": "Võ Thị Phương",
+    "rating": 5,
+    "content": "Giá rẻ hơn các shop khác mà chất lượng không kém. Sẽ giới thiệu bạn bè.",
+    "product": "OPPO Reno11",
+    "city": "Biên Hòa",
+    "date": "2024-07-07"
+  },
+  {
+    "id": 7,
+    "name": "Đặng Quốc Giang",
+    "rating": 5,
+    "content": "Nhân viên giải đáp thắc mắc rất kỹ, mua máy cũ nhưng như mới.",
+    "product": "vivo V29",
+    "city": "Nha Trang",
+    "date": "2024-08-08"
+  },
+  {
+    "id": 8,
+    "name": "Bùi Thị Hoa",
+    "rating": 5,
+    "content": "Trả góp đơn giản, thủ tục nhanh. Rất tiện lợi cho sinh viên.",
+    "product": "iPhone 13",
+    "city": "Huế",
+    "date": "2024-09-09"
+  },
+  {
+    "id": 9,
+    "name": "Ngô Văn Hùng",
+    "rating": 5,
+    "content": "Máy test kỹ trước khi giao, cảm ơn shop đã tư vấn nhiệt tình.",
+    "product": "Samsung Z Flip5",
+    "city": "Vinh",
+    "date": "2024-10-10"
+  },
+  {
+    "id": 10,
+    "name": "Đỗ Thị Lan",
+    "rating": 5,
+    "content": "Mua tặng người thân, hài lòng về chất lượng và dịch vụ.",
+    "product": "Redmi Note 13",
+    "city": "Quy Nhon",
+    "date": "2024-11-11"
+  },
+  {
+    "id": 11,
+    "name": "Lý Quang Minh",
+    "rating": 5,
+    "content": "Giao hàng tận nơi, kiểm tra máy trước mặt. Rất chuyên nghiệp.",
+    "product": "iPhone 12",
+    "city": "Bắc Ninh",
+    "date": "2024-12-12"
+  },
+  {
+    "id": 12,
+    "name": "Mai Thị Nga",
+    "rating": 5,
+    "content": "Pin trâu, camera đẹp. Dùng 2 tháng vẫn rất ổn.",
+    "product": "Pixel 8",
+    "city": "Long An",
+    "date": "2024-01-13"
+  },
+  {
+    "id": 13,
+    "name": "Trương Văn Oanh",
+    "rating": 5,
+    "content": "Shop bảo hành rõ ràng, có phiếu bảo hành đầy đủ.",
+    "product": "Realme 12 Pro",
+    "city": "Bình Dương",
+    "date": "2024-02-14"
+  },
+  {
+    "id": 14,
+    "name": "Phan Thị Quỳnh",
+    "rating": 5,
+    "content": "Giá tốt, khuyến mãi hấp dẫn. Mua được máy mơ ước.",
+    "product": "Huawei P60",
+    "city": "Hà Nội",
+    "date": "2024-03-15"
+  },
+  {
+    "id": 15,
+    "name": "Cao Văn Sơn",
+    "rating": 5,
+    "content": "Tư vấn Zalo nhanh, đặt hàng xong 2 tiếng đã có máy.",
+    "product": "Nothing Phone 2",
+    "city": "TP.HCM",
+    "date": "2024-04-16"
+  },
+  {
+    "id": 16,
+    "name": "Dương Thị Tâm",
+    "rating": 5,
+    "content": "Máy cũ nhưng ngoại hình 99%, pin còn tốt. Rất đáng tiền.",
+    "product": "iPhone 15 Pro Max",
+    "city": "Đà Nẵng",
+    "date": "2024-05-17"
+  },
+  {
+    "id": 17,
+    "name": "Hà Minh Uyên",
+    "rating": 4,
+    "content": "Đổi từ iPhone 13 lên 15 Pro, shop hỗ trợ đổi máy cũ giá tốt.",
+    "product": "Samsung S24 Ultra",
+    "city": "Hải Phòng",
+    "date": "2024-06-18"
+  },
+  {
+    "id": 18,
+    "name": "Khương Văn Vinh",
+    "rating": 5,
+    "content": "Không bị ép mua phụ kiện, thái độ phục vụ rất tốt.",
+    "product": "Xiaomi 14",
+    "city": "Cần Thơ",
+    "date": "2024-07-19"
+  },
+  {
+    "id": 19,
+    "name": "Lâm Thị Xuân",
+    "rating": 5,
+    "content": "Mua online qua Zalo, nhận máy đúng như mô tả. Uy tín.",
+    "product": "iPhone 14",
+    "city": "Biên Hòa",
+    "date": "2024-08-20"
+  },
+  {
+    "id": 20,
+    "name": "Mạc Văn Yên",
+    "rating": 5,
+    "content": "Camera chụp đẹp, màn hình sáng. Dùng rất hài lòng.",
+    "product": "Galaxy A55",
+    "city": "Nha Trang",
+    "date": "2024-09-21"
+  },
+  {
+    "id": 21,
+    "name": "Nguyễn Thị Ánh",
+    "rating": 5,
+    "content": "Nhân viên am hiểu sản phẩm, gợi ý máy phù hợp ngân sách.",
+    "product": "OPPO Reno11",
+    "city": "Huế",
+    "date": "2024-10-22"
+  },
+  {
+    "id": 22,
+    "name": "Trần Văn Bách",
+    "rating": 5,
+    "content": "Bảo hành 12 tháng, yên tâm sử dụng lâu dài.",
+    "product": "vivo V29",
+    "city": "Vinh",
+    "date": "2024-11-23"
+  },
+  {
+    "id": 23,
+    "name": "Lê Thị Cẩm",
+    "rating": 5,
+    "content": "Giá cạnh tranh nhất khu vực, đã so sánh nhiều nơi.",
+    "product": "iPhone 13",
+    "city": "Quy Nhon",
+    "date": "2024-12-24"
+  },
+  {
+    "id": 24,
+    "name": "Phạm Văn Đạt",
+    "rating": 5,
+    "content": "Máy unlock quốc tế, dùng SIM mọi nhà mạng thoải mái.",
+    "product": "Samsung Z Flip5",
+    "city": "Bắc Ninh",
+    "date": "2024-01-25"
+  },
+  {
+    "id": 25,
+    "name": "Hoàng Thị Em",
+    "rating": 5,
+    "content": "Hộp đầy đủ phụ kiện, seal còn nguyên. Rất chuẩn hàng mới.",
+    "product": "Redmi Note 13",
+    "city": "Long An",
+    "date": "2024-02-26"
+  },
+  {
+    "id": 26,
+    "name": "Võ Văn Phúc",
+    "rating": 5,
+    "content": "Mua máy ở đây rất hài lòng, giá tốt hơn nhiều chỗ khác. Nhân viên tư vấn nhiệt tình.",
+    "product": "iPhone 12",
+    "city": "Bình Dương",
+    "date": "2024-03-27"
+  },
+  {
+    "id": 27,
+    "name": "Đặng Thị Giang",
+    "rating": 5,
+    "content": "Máy mới nguyên seal, bảo hành đầy đủ. Giao hàng nhanh trong ngày, rất uy tín.",
+    "product": "Pixel 8",
+    "city": "Hà Nội",
+    "date": "2024-04-28"
+  },
+  {
+    "id": 28,
+    "name": "Bùi Văn Hải",
+    "rating": 5,
+    "content": "Lần thứ 3 mua điện thoại tại PhoneShop, luôn tin tưởng chất lượng.",
+    "product": "Realme 12 Pro",
+    "city": "TP.HCM",
+    "date": "2024-05-01"
+  },
+  {
+    "id": 29,
+    "name": "Ngô Thị Hương",
+    "rating": 5,
+    "content": "Tư vấn kỹ, giá cả hợp lý. Máy dùng rất mượt, pin tốt.",
+    "product": "Huawei P60",
+    "city": "Đà Nẵng",
+    "date": "2024-06-02"
+  },
+  {
+    "id": 30,
+    "name": "Đỗ Văn Kiên",
+    "rating": 5,
+    "content": "Shop uy tín, đổi trả nhanh khi có vấn đề nhỏ. Rất hài lòng.",
+    "product": "Nothing Phone 2",
+    "city": "Hải Phòng",
+    "date": "2024-07-03"
+  },
+  {
+    "id": 31,
+    "name": "Lý Thị Linh",
+    "rating": 5,
+    "content": "Giá rẻ hơn các shop khác mà chất lượng không kém. Sẽ giới thiệu bạn bè.",
+    "product": "iPhone 15 Pro Max",
+    "city": "Cần Thơ",
+    "date": "2024-08-04"
+  },
+  {
+    "id": 32,
+    "name": "Mai Văn Mạnh",
+    "rating": 5,
+    "content": "Nhân viên giải đáp thắc mắc rất kỹ, mua máy cũ nhưng như mới.",
+    "product": "Samsung S24 Ultra",
+    "city": "Biên Hòa",
+    "date": "2024-09-05"
+  },
+  {
+    "id": 33,
+    "name": "Trương Thị Ngọc",
+    "rating": 5,
+    "content": "Trả góp đơn giản, thủ tục nhanh. Rất tiện lợi cho sinh viên.",
+    "product": "Xiaomi 14",
+    "city": "Nha Trang",
+    "date": "2024-10-06"
+  },
+  {
+    "id": 34,
+    "name": "Phan Văn Phong",
+    "rating": 4,
+    "content": "Máy test kỹ trước khi giao, cảm ơn shop đã tư vấn nhiệt tình.",
+    "product": "iPhone 14",
+    "city": "Huế",
+    "date": "2024-11-07"
+  },
+  {
+    "id": 35,
+    "name": "Cao Thị Quyên",
+    "rating": 5,
+    "content": "Mua tặng người thân, hài lòng về chất lượng và dịch vụ.",
+    "product": "Galaxy A55",
+    "city": "Vinh",
+    "date": "2024-12-08"
+  },
+  {
+    "id": 36,
+    "name": "Dương Văn Sang",
+    "rating": 5,
+    "content": "Giao hàng tận nơi, kiểm tra máy trước mặt. Rất chuyên nghiệp.",
+    "product": "OPPO Reno11",
+    "city": "Quy Nhon",
+    "date": "2024-01-09"
+  },
+  {
+    "id": 37,
+    "name": "Hà Thị Thúy",
+    "rating": 5,
+    "content": "Pin trâu, camera đẹp. Dùng 2 tháng vẫn rất ổn.",
+    "product": "vivo V29",
+    "city": "Bắc Ninh",
+    "date": "2024-02-10"
+  },
+  {
+    "id": 38,
+    "name": "Khương Văn Tuấn",
+    "rating": 5,
+    "content": "Shop bảo hành rõ ràng, có phiếu bảo hành đầy đủ.",
+    "product": "iPhone 13",
+    "city": "Long An",
+    "date": "2024-03-11"
+  },
+  {
+    "id": 39,
+    "name": "Lâm Thị Uyên",
+    "rating": 5,
+    "content": "Giá tốt, khuyến mãi hấp dẫn. Mua được máy mơ ước.",
+    "product": "Samsung Z Flip5",
+    "city": "Bình Dương",
+    "date": "2024-04-12"
+  },
+  {
+    "id": 40,
+    "name": "Mạc Văn Vương",
+    "rating": 5,
+    "content": "Tư vấn Zalo nhanh, đặt hàng xong 2 tiếng đã có máy.",
+    "product": "Redmi Note 13",
+    "city": "Hà Nội",
+    "date": "2024-05-13"
+  },
+  {
+    "id": 41,
+    "name": "Nguyễn Văn An",
+    "rating": 5,
+    "content": "Máy cũ nhưng ngoại hình 99%, pin còn tốt. Rất đáng tiền.",
+    "product": "iPhone 12",
+    "city": "TP.HCM",
+    "date": "2024-06-14"
+  },
+  {
+    "id": 42,
+    "name": "Trần Thị Bình",
+    "rating": 5,
+    "content": "Đổi từ iPhone 13 lên 15 Pro, shop hỗ trợ đổi máy cũ giá tốt.",
+    "product": "Pixel 8",
+    "city": "Đà Nẵng",
+    "date": "2024-07-15"
+  },
+  {
+    "id": 43,
+    "name": "Lê Hoàng Cường",
+    "rating": 5,
+    "content": "Không bị ép mua phụ kiện, thái độ phục vụ rất tốt.",
+    "product": "Realme 12 Pro",
+    "city": "Hải Phòng",
+    "date": "2024-08-16"
+  },
+  {
+    "id": 44,
+    "name": "Phạm Thị Dung",
+    "rating": 5,
+    "content": "Mua online qua Zalo, nhận máy đúng như mô tả. Uy tín.",
+    "product": "Huawei P60",
+    "city": "Cần Thơ",
+    "date": "2024-09-17"
+  },
+  {
+    "id": 45,
+    "name": "Hoàng Minh Em",
+    "rating": 5,
+    "content": "Camera chụp đẹp, màn hình sáng. Dùng rất hài lòng.",
+    "product": "Nothing Phone 2",
+    "city": "Biên Hòa",
+    "date": "2024-10-18"
+  },
+  {
+    "id": 46,
+    "name": "Võ Thị Phương",
+    "rating": 5,
+    "content": "Nhân viên am hiểu sản phẩm, gợi ý máy phù hợp ngân sách.",
+    "product": "iPhone 15 Pro Max",
+    "city": "Nha Trang",
+    "date": "2024-11-19"
+  },
+  {
+    "id": 47,
+    "name": "Đặng Quốc Giang",
+    "rating": 5,
+    "content": "Bảo hành 12 tháng, yên tâm sử dụng lâu dài.",
+    "product": "Samsung S24 Ultra",
+    "city": "Huế",
+    "date": "2024-12-20"
+  },
+  {
+    "id": 48,
+    "name": "Bùi Thị Hoa",
+    "rating": 5,
+    "content": "Giá cạnh tranh nhất khu vực, đã so sánh nhiều nơi.",
+    "product": "Xiaomi 14",
+    "city": "Vinh",
+    "date": "2024-01-21"
+  },
+  {
+    "id": 49,
+    "name": "Ngô Văn Hùng",
+    "rating": 5,
+    "content": "Máy unlock quốc tế, dùng SIM mọi nhà mạng thoải mái.",
+    "product": "iPhone 14",
+    "city": "Quy Nhon",
+    "date": "2024-02-22"
+  },
+  {
+    "id": 50,
+    "name": "Đỗ Thị Lan",
+    "rating": 5,
+    "content": "Hộp đầy đủ phụ kiện, seal còn nguyên. Rất chuẩn hàng mới.",
+    "product": "Galaxy A55",
+    "city": "Bắc Ninh",
+    "date": "2024-03-23"
+  },
+  {
+    "id": 51,
+    "name": "Lý Quang Minh",
+    "rating": 4,
+    "content": "Mua máy ở đây rất hài lòng, giá tốt hơn nhiều chỗ khác. Nhân viên tư vấn nhiệt tình.",
+    "product": "OPPO Reno11",
+    "city": "Long An",
+    "date": "2024-04-24"
+  },
+  {
+    "id": 52,
+    "name": "Mai Thị Nga",
+    "rating": 5,
+    "content": "Máy mới nguyên seal, bảo hành đầy đủ. Giao hàng nhanh trong ngày, rất uy tín.",
+    "product": "vivo V29",
+    "city": "Bình Dương",
+    "date": "2024-05-25"
+  },
+  {
+    "id": 53,
+    "name": "Trương Văn Oanh",
+    "rating": 5,
+    "content": "Lần thứ 3 mua điện thoại tại PhoneShop, luôn tin tưởng chất lượng.",
+    "product": "iPhone 13",
+    "city": "Hà Nội",
+    "date": "2024-06-26"
+  },
+  {
+    "id": 54,
+    "name": "Phan Thị Quỳnh",
+    "rating": 5,
+    "content": "Tư vấn kỹ, giá cả hợp lý. Máy dùng rất mượt, pin tốt.",
+    "product": "Samsung Z Flip5",
+    "city": "TP.HCM",
+    "date": "2024-07-27"
+  },
+  {
+    "id": 55,
+    "name": "Cao Văn Sơn",
+    "rating": 5,
+    "content": "Shop uy tín, đổi trả nhanh khi có vấn đề nhỏ. Rất hài lòng.",
+    "product": "Redmi Note 13",
+    "city": "Đà Nẵng",
+    "date": "2024-08-28"
+  },
+  {
+    "id": 56,
+    "name": "Dương Thị Tâm",
+    "rating": 5,
+    "content": "Giá rẻ hơn các shop khác mà chất lượng không kém. Sẽ giới thiệu bạn bè.",
+    "product": "iPhone 12",
+    "city": "Hải Phòng",
+    "date": "2024-09-01"
+  },
+  {
+    "id": 57,
+    "name": "Hà Minh Uyên",
+    "rating": 5,
+    "content": "Nhân viên giải đáp thắc mắc rất kỹ, mua máy cũ nhưng như mới.",
+    "product": "Pixel 8",
+    "city": "Cần Thơ",
+    "date": "2024-10-02"
+  },
+  {
+    "id": 58,
+    "name": "Khương Văn Vinh",
+    "rating": 5,
+    "content": "Trả góp đơn giản, thủ tục nhanh. Rất tiện lợi cho sinh viên.",
+    "product": "Realme 12 Pro",
+    "city": "Biên Hòa",
+    "date": "2024-11-03"
+  },
+  {
+    "id": 59,
+    "name": "Lâm Thị Xuân",
+    "rating": 5,
+    "content": "Máy test kỹ trước khi giao, cảm ơn shop đã tư vấn nhiệt tình.",
+    "product": "Huawei P60",
+    "city": "Nha Trang",
+    "date": "2024-12-04"
+  },
+  {
+    "id": 60,
+    "name": "Mạc Văn Yên",
+    "rating": 5,
+    "content": "Mua tặng người thân, hài lòng về chất lượng và dịch vụ.",
+    "product": "Nothing Phone 2",
+    "city": "Huế",
+    "date": "2024-01-05"
+  },
+  {
+    "id": 61,
+    "name": "Nguyễn Thị Ánh",
+    "rating": 5,
+    "content": "Giao hàng tận nơi, kiểm tra máy trước mặt. Rất chuyên nghiệp.",
+    "product": "iPhone 15 Pro Max",
+    "city": "Vinh",
+    "date": "2024-02-06"
+  },
+  {
+    "id": 62,
+    "name": "Trần Văn Bách",
+    "rating": 5,
+    "content": "Pin trâu, camera đẹp. Dùng 2 tháng vẫn rất ổn.",
+    "product": "Samsung S24 Ultra",
+    "city": "Quy Nhon",
+    "date": "2024-03-07"
+  },
+  {
+    "id": 63,
+    "name": "Lê Thị Cẩm",
+    "rating": 5,
+    "content": "Shop bảo hành rõ ràng, có phiếu bảo hành đầy đủ.",
+    "product": "Xiaomi 14",
+    "city": "Bắc Ninh",
+    "date": "2024-04-08"
+  },
+  {
+    "id": 64,
+    "name": "Phạm Văn Đạt",
+    "rating": 5,
+    "content": "Giá tốt, khuyến mãi hấp dẫn. Mua được máy mơ ước.",
+    "product": "iPhone 14",
+    "city": "Long An",
+    "date": "2024-05-09"
+  },
+  {
+    "id": 65,
+    "name": "Hoàng Thị Em",
+    "rating": 5,
+    "content": "Tư vấn Zalo nhanh, đặt hàng xong 2 tiếng đã có máy.",
+    "product": "Galaxy A55",
+    "city": "Bình Dương",
+    "date": "2024-06-10"
+  },
+  {
+    "id": 66,
+    "name": "Võ Văn Phúc",
+    "rating": 5,
+    "content": "Máy cũ nhưng ngoại hình 99%, pin còn tốt. Rất đáng tiền.",
+    "product": "OPPO Reno11",
+    "city": "Hà Nội",
+    "date": "2024-07-11"
+  },
+  {
+    "id": 67,
+    "name": "Đặng Thị Giang",
+    "rating": 5,
+    "content": "Đổi từ iPhone 13 lên 15 Pro, shop hỗ trợ đổi máy cũ giá tốt.",
+    "product": "vivo V29",
+    "city": "TP.HCM",
+    "date": "2024-08-12"
+  },
+  {
+    "id": 68,
+    "name": "Bùi Văn Hải",
+    "rating": 4,
+    "content": "Không bị ép mua phụ kiện, thái độ phục vụ rất tốt.",
+    "product": "iPhone 13",
+    "city": "Đà Nẵng",
+    "date": "2024-09-13"
+  },
+  {
+    "id": 69,
+    "name": "Ngô Thị Hương",
+    "rating": 5,
+    "content": "Mua online qua Zalo, nhận máy đúng như mô tả. Uy tín.",
+    "product": "Samsung Z Flip5",
+    "city": "Hải Phòng",
+    "date": "2024-10-14"
+  },
+  {
+    "id": 70,
+    "name": "Đỗ Văn Kiên",
+    "rating": 5,
+    "content": "Camera chụp đẹp, màn hình sáng. Dùng rất hài lòng.",
+    "product": "Redmi Note 13",
+    "city": "Cần Thơ",
+    "date": "2024-11-15"
+  },
+  {
+    "id": 71,
+    "name": "Lý Thị Linh",
+    "rating": 5,
+    "content": "Nhân viên am hiểu sản phẩm, gợi ý máy phù hợp ngân sách.",
+    "product": "iPhone 12",
+    "city": "Biên Hòa",
+    "date": "2024-12-16"
+  },
+  {
+    "id": 72,
+    "name": "Mai Văn Mạnh",
+    "rating": 5,
+    "content": "Bảo hành 12 tháng, yên tâm sử dụng lâu dài.",
+    "product": "Pixel 8",
+    "city": "Nha Trang",
+    "date": "2024-01-17"
+  },
+  {
+    "id": 73,
+    "name": "Trương Thị Ngọc",
+    "rating": 5,
+    "content": "Giá cạnh tranh nhất khu vực, đã so sánh nhiều nơi.",
+    "product": "Realme 12 Pro",
+    "city": "Huế",
+    "date": "2024-02-18"
+  },
+  {
+    "id": 74,
+    "name": "Phan Văn Phong",
+    "rating": 5,
+    "content": "Máy unlock quốc tế, dùng SIM mọi nhà mạng thoải mái.",
+    "product": "Huawei P60",
+    "city": "Vinh",
+    "date": "2024-03-19"
+  },
+  {
+    "id": 75,
+    "name": "Cao Thị Quyên",
+    "rating": 5,
+    "content": "Hộp đầy đủ phụ kiện, seal còn nguyên. Rất chuẩn hàng mới.",
+    "product": "Nothing Phone 2",
+    "city": "Quy Nhon",
+    "date": "2024-04-20"
+  },
+  {
+    "id": 76,
+    "name": "Dương Văn Sang",
+    "rating": 5,
+    "content": "Mua máy ở đây rất hài lòng, giá tốt hơn nhiều chỗ khác. Nhân viên tư vấn nhiệt tình.",
+    "product": "iPhone 15 Pro Max",
+    "city": "Bắc Ninh",
+    "date": "2024-05-21"
+  },
+  {
+    "id": 77,
+    "name": "Hà Thị Thúy",
+    "rating": 5,
+    "content": "Máy mới nguyên seal, bảo hành đầy đủ. Giao hàng nhanh trong ngày, rất uy tín.",
+    "product": "Samsung S24 Ultra",
+    "city": "Long An",
+    "date": "2024-06-22"
+  },
+  {
+    "id": 78,
+    "name": "Khương Văn Tuấn",
+    "rating": 5,
+    "content": "Lần thứ 3 mua điện thoại tại PhoneShop, luôn tin tưởng chất lượng.",
+    "product": "Xiaomi 14",
+    "city": "Bình Dương",
+    "date": "2024-07-23"
+  },
+  {
+    "id": 79,
+    "name": "Lâm Thị Uyên",
+    "rating": 5,
+    "content": "Tư vấn kỹ, giá cả hợp lý. Máy dùng rất mượt, pin tốt.",
+    "product": "iPhone 14",
+    "city": "Hà Nội",
+    "date": "2024-08-24"
+  },
+  {
+    "id": 80,
+    "name": "Mạc Văn Vương",
+    "rating": 5,
+    "content": "Shop uy tín, đổi trả nhanh khi có vấn đề nhỏ. Rất hài lòng.",
+    "product": "Galaxy A55",
+    "city": "TP.HCM",
+    "date": "2024-09-25"
+  },
+  {
+    "id": 81,
+    "name": "Nguyễn Văn An",
+    "rating": 5,
+    "content": "Giá rẻ hơn các shop khác mà chất lượng không kém. Sẽ giới thiệu bạn bè.",
+    "product": "OPPO Reno11",
+    "city": "Đà Nẵng",
+    "date": "2024-10-26"
+  },
+  {
+    "id": 82,
+    "name": "Trần Thị Bình",
+    "rating": 5,
+    "content": "Nhân viên giải đáp thắc mắc rất kỹ, mua máy cũ nhưng như mới.",
+    "product": "vivo V29",
+    "city": "Hải Phòng",
+    "date": "2024-11-27"
+  },
+  {
+    "id": 83,
+    "name": "Lê Hoàng Cường",
+    "rating": 5,
+    "content": "Trả góp đơn giản, thủ tục nhanh. Rất tiện lợi cho sinh viên.",
+    "product": "iPhone 13",
+    "city": "Cần Thơ",
+    "date": "2024-12-28"
+  },
+  {
+    "id": 84,
+    "name": "Phạm Thị Dung",
+    "rating": 5,
+    "content": "Máy test kỹ trước khi giao, cảm ơn shop đã tư vấn nhiệt tình.",
+    "product": "Samsung Z Flip5",
+    "city": "Biên Hòa",
+    "date": "2024-01-01"
+  },
+  {
+    "id": 85,
+    "name": "Hoàng Minh Em",
+    "rating": 4,
+    "content": "Mua tặng người thân, hài lòng về chất lượng và dịch vụ.",
+    "product": "Redmi Note 13",
+    "city": "Nha Trang",
+    "date": "2024-02-02"
+  },
+  {
+    "id": 86,
+    "name": "Võ Thị Phương",
+    "rating": 5,
+    "content": "Giao hàng tận nơi, kiểm tra máy trước mặt. Rất chuyên nghiệp.",
+    "product": "iPhone 12",
+    "city": "Huế",
+    "date": "2024-03-03"
+  },
+  {
+    "id": 87,
+    "name": "Đặng Quốc Giang",
+    "rating": 5,
+    "content": "Pin trâu, camera đẹp. Dùng 2 tháng vẫn rất ổn.",
+    "product": "Pixel 8",
+    "city": "Vinh",
+    "date": "2024-04-04"
+  },
+  {
+    "id": 88,
+    "name": "Bùi Thị Hoa",
+    "rating": 5,
+    "content": "Shop bảo hành rõ ràng, có phiếu bảo hành đầy đủ.",
+    "product": "Realme 12 Pro",
+    "city": "Quy Nhon",
+    "date": "2024-05-05"
+  },
+  {
+    "id": 89,
+    "name": "Ngô Văn Hùng",
+    "rating": 5,
+    "content": "Giá tốt, khuyến mãi hấp dẫn. Mua được máy mơ ước.",
+    "product": "Huawei P60",
+    "city": "Bắc Ninh",
+    "date": "2024-06-06"
+  },
+  {
+    "id": 90,
+    "name": "Đỗ Thị Lan",
+    "rating": 5,
+    "content": "Tư vấn Zalo nhanh, đặt hàng xong 2 tiếng đã có máy.",
+    "product": "Nothing Phone 2",
+    "city": "Long An",
+    "date": "2024-07-07"
+  },
+  {
+    "id": 91,
+    "name": "Lý Quang Minh",
+    "rating": 5,
+    "content": "Máy cũ nhưng ngoại hình 99%, pin còn tốt. Rất đáng tiền.",
+    "product": "iPhone 15 Pro Max",
+    "city": "Bình Dương",
+    "date": "2024-08-08"
+  },
+  {
+    "id": 92,
+    "name": "Mai Thị Nga",
+    "rating": 5,
+    "content": "Đổi từ iPhone 13 lên 15 Pro, shop hỗ trợ đổi máy cũ giá tốt.",
+    "product": "Samsung S24 Ultra",
+    "city": "Hà Nội",
+    "date": "2024-09-09"
+  },
+  {
+    "id": 93,
+    "name": "Trương Văn Oanh",
+    "rating": 5,
+    "content": "Không bị ép mua phụ kiện, thái độ phục vụ rất tốt.",
+    "product": "Xiaomi 14",
+    "city": "TP.HCM",
+    "date": "2024-10-10"
+  },
+  {
+    "id": 94,
+    "name": "Phan Thị Quỳnh",
+    "rating": 5,
+    "content": "Mua online qua Zalo, nhận máy đúng như mô tả. Uy tín.",
+    "product": "iPhone 14",
+    "city": "Đà Nẵng",
+    "date": "2024-11-11"
+  },
+  {
+    "id": 95,
+    "name": "Cao Văn Sơn",
+    "rating": 5,
+    "content": "Camera chụp đẹp, màn hình sáng. Dùng rất hài lòng.",
+    "product": "Galaxy A55",
+    "city": "Hải Phòng",
+    "date": "2024-12-12"
+  },
+  {
+    "id": 96,
+    "name": "Dương Thị Tâm",
+    "rating": 5,
+    "content": "Nhân viên am hiểu sản phẩm, gợi ý máy phù hợp ngân sách.",
+    "product": "OPPO Reno11",
+    "city": "Cần Thơ",
+    "date": "2024-01-13"
+  },
+  {
+    "id": 97,
+    "name": "Hà Minh Uyên",
+    "rating": 5,
+    "content": "Bảo hành 12 tháng, yên tâm sử dụng lâu dài.",
+    "product": "vivo V29",
+    "city": "Biên Hòa",
+    "date": "2024-02-14"
+  },
+  {
+    "id": 98,
+    "name": "Khương Văn Vinh",
+    "rating": 5,
+    "content": "Giá cạnh tranh nhất khu vực, đã so sánh nhiều nơi.",
+    "product": "iPhone 13",
+    "city": "Nha Trang",
+    "date": "2024-03-15"
+  },
+  {
+    "id": 99,
+    "name": "Lâm Thị Xuân",
+    "rating": 5,
+    "content": "Máy unlock quốc tế, dùng SIM mọi nhà mạng thoải mái.",
+    "product": "Samsung Z Flip5",
+    "city": "Huế",
+    "date": "2024-04-16"
+  },
+  {
+    "id": 100,
+    "name": "Mạc Văn Yên",
+    "rating": 5,
+    "content": "Hộp đầy đủ phụ kiện, seal còn nguyên. Rất chuẩn hàng mới.",
+    "product": "Redmi Note 13",
+    "city": "Vinh",
+    "date": "2024-05-17"
+  },
+  {
+    "id": 101,
+    "name": "Nguyễn Thị Ánh",
+    "rating": 5,
+    "content": "Mua máy ở đây rất hài lòng, giá tốt hơn nhiều chỗ khác. Nhân viên tư vấn nhiệt tình.",
+    "product": "iPhone 12",
+    "city": "Quy Nhon",
+    "date": "2024-06-18"
+  },
+  {
+    "id": 102,
+    "name": "Trần Văn Bách",
+    "rating": 4,
+    "content": "Máy mới nguyên seal, bảo hành đầy đủ. Giao hàng nhanh trong ngày, rất uy tín.",
+    "product": "Pixel 8",
+    "city": "Bắc Ninh",
+    "date": "2024-07-19"
+  },
+  {
+    "id": 103,
+    "name": "Lê Thị Cẩm",
+    "rating": 5,
+    "content": "Lần thứ 3 mua điện thoại tại PhoneShop, luôn tin tưởng chất lượng.",
+    "product": "Realme 12 Pro",
+    "city": "Long An",
+    "date": "2024-08-20"
+  },
+  {
+    "id": 104,
+    "name": "Phạm Văn Đạt",
+    "rating": 5,
+    "content": "Tư vấn kỹ, giá cả hợp lý. Máy dùng rất mượt, pin tốt.",
+    "product": "Huawei P60",
+    "city": "Bình Dương",
+    "date": "2024-09-21"
+  },
+  {
+    "id": 105,
+    "name": "Hoàng Thị Em",
+    "rating": 5,
+    "content": "Shop uy tín, đổi trả nhanh khi có vấn đề nhỏ. Rất hài lòng.",
+    "product": "Nothing Phone 2",
+    "city": "Hà Nội",
+    "date": "2024-10-22"
+  },
+  {
+    "id": 106,
+    "name": "Võ Văn Phúc",
+    "rating": 5,
+    "content": "Giá rẻ hơn các shop khác mà chất lượng không kém. Sẽ giới thiệu bạn bè.",
+    "product": "iPhone 15 Pro Max",
+    "city": "TP.HCM",
+    "date": "2024-11-23"
+  },
+  {
+    "id": 107,
+    "name": "Đặng Thị Giang",
+    "rating": 5,
+    "content": "Nhân viên giải đáp thắc mắc rất kỹ, mua máy cũ nhưng như mới.",
+    "product": "Samsung S24 Ultra",
+    "city": "Đà Nẵng",
+    "date": "2024-12-24"
+  },
+  {
+    "id": 108,
+    "name": "Bùi Văn Hải",
+    "rating": 5,
+    "content": "Trả góp đơn giản, thủ tục nhanh. Rất tiện lợi cho sinh viên.",
+    "product": "Xiaomi 14",
+    "city": "Hải Phòng",
+    "date": "2024-01-25"
+  },
+  {
+    "id": 109,
+    "name": "Ngô Thị Hương",
+    "rating": 5,
+    "content": "Máy test kỹ trước khi giao, cảm ơn shop đã tư vấn nhiệt tình.",
+    "product": "iPhone 14",
+    "city": "Cần Thơ",
+    "date": "2024-02-26"
+  },
+  {
+    "id": 110,
+    "name": "Đỗ Văn Kiên",
+    "rating": 5,
+    "content": "Mua tặng người thân, hài lòng về chất lượng và dịch vụ.",
+    "product": "Galaxy A55",
+    "city": "Biên Hòa",
+    "date": "2024-03-27"
+  },
+  {
+    "id": 111,
+    "name": "Lý Thị Linh",
+    "rating": 5,
+    "content": "Giao hàng tận nơi, kiểm tra máy trước mặt. Rất chuyên nghiệp.",
+    "product": "OPPO Reno11",
+    "city": "Nha Trang",
+    "date": "2024-04-28"
+  },
+  {
+    "id": 112,
+    "name": "Mai Văn Mạnh",
+    "rating": 5,
+    "content": "Pin trâu, camera đẹp. Dùng 2 tháng vẫn rất ổn.",
+    "product": "vivo V29",
+    "city": "Huế",
+    "date": "2024-05-01"
+  },
+  {
+    "id": 113,
+    "name": "Trương Thị Ngọc",
+    "rating": 5,
+    "content": "Shop bảo hành rõ ràng, có phiếu bảo hành đầy đủ.",
+    "product": "iPhone 13",
+    "city": "Vinh",
+    "date": "2024-06-02"
+  },
+  {
+    "id": 114,
+    "name": "Phan Văn Phong",
+    "rating": 5,
+    "content": "Giá tốt, khuyến mãi hấp dẫn. Mua được máy mơ ước.",
+    "product": "Samsung Z Flip5",
+    "city": "Quy Nhon",
+    "date": "2024-07-03"
+  },
+  {
+    "id": 115,
+    "name": "Cao Thị Quyên",
+    "rating": 5,
+    "content": "Tư vấn Zalo nhanh, đặt hàng xong 2 tiếng đã có máy.",
+    "product": "Redmi Note 13",
+    "city": "Bắc Ninh",
+    "date": "2024-08-04"
+  },
+  {
+    "id": 116,
+    "name": "Dương Văn Sang",
+    "rating": 5,
+    "content": "Máy cũ nhưng ngoại hình 99%, pin còn tốt. Rất đáng tiền.",
+    "product": "iPhone 12",
+    "city": "Long An",
+    "date": "2024-09-05"
+  },
+  {
+    "id": 117,
+    "name": "Hà Thị Thúy",
+    "rating": 5,
+    "content": "Đổi từ iPhone 13 lên 15 Pro, shop hỗ trợ đổi máy cũ giá tốt.",
+    "product": "Pixel 8",
+    "city": "Bình Dương",
+    "date": "2024-10-06"
+  },
+  {
+    "id": 118,
+    "name": "Khương Văn Tuấn",
+    "rating": 5,
+    "content": "Không bị ép mua phụ kiện, thái độ phục vụ rất tốt.",
+    "product": "Realme 12 Pro",
+    "city": "Hà Nội",
+    "date": "2024-11-07"
+  },
+  {
+    "id": 119,
+    "name": "Lâm Thị Uyên",
+    "rating": 4,
+    "content": "Mua online qua Zalo, nhận máy đúng như mô tả. Uy tín.",
+    "product": "Huawei P60",
+    "city": "TP.HCM",
+    "date": "2024-12-08"
+  },
+  {
+    "id": 120,
+    "name": "Mạc Văn Vương",
+    "rating": 5,
+    "content": "Camera chụp đẹp, màn hình sáng. Dùng rất hài lòng.",
+    "product": "Nothing Phone 2",
+    "city": "Đà Nẵng",
+    "date": "2024-01-09"
+  },
+  {
+    "id": 121,
+    "name": "Nguyễn Văn An",
+    "rating": 5,
+    "content": "Nhân viên am hiểu sản phẩm, gợi ý máy phù hợp ngân sách.",
+    "product": "iPhone 15 Pro Max",
+    "city": "Hải Phòng",
+    "date": "2024-02-10"
+  },
+  {
+    "id": 122,
+    "name": "Trần Thị Bình",
+    "rating": 5,
+    "content": "Bảo hành 12 tháng, yên tâm sử dụng lâu dài.",
+    "product": "Samsung S24 Ultra",
+    "city": "Cần Thơ",
+    "date": "2024-03-11"
+  },
+  {
+    "id": 123,
+    "name": "Lê Hoàng Cường",
+    "rating": 5,
+    "content": "Giá cạnh tranh nhất khu vực, đã so sánh nhiều nơi.",
+    "product": "Xiaomi 14",
+    "city": "Biên Hòa",
+    "date": "2024-04-12"
+  },
+  {
+    "id": 124,
+    "name": "Phạm Thị Dung",
+    "rating": 5,
+    "content": "Máy unlock quốc tế, dùng SIM mọi nhà mạng thoải mái.",
+    "product": "iPhone 14",
+    "city": "Nha Trang",
+    "date": "2024-05-13"
+  },
+  {
+    "id": 125,
+    "name": "Hoàng Minh Em",
+    "rating": 5,
+    "content": "Hộp đầy đủ phụ kiện, seal còn nguyên. Rất chuẩn hàng mới.",
+    "product": "Galaxy A55",
+    "city": "Huế",
+    "date": "2024-06-14"
+  },
+  {
+    "id": 126,
+    "name": "Võ Thị Phương",
+    "rating": 5,
+    "content": "Mua máy ở đây rất hài lòng, giá tốt hơn nhiều chỗ khác. Nhân viên tư vấn nhiệt tình.",
+    "product": "OPPO Reno11",
+    "city": "Vinh",
+    "date": "2024-07-15"
+  },
+  {
+    "id": 127,
+    "name": "Đặng Quốc Giang",
+    "rating": 5,
+    "content": "Máy mới nguyên seal, bảo hành đầy đủ. Giao hàng nhanh trong ngày, rất uy tín.",
+    "product": "vivo V29",
+    "city": "Quy Nhon",
+    "date": "2024-08-16"
+  },
+  {
+    "id": 128,
+    "name": "Bùi Thị Hoa",
+    "rating": 5,
+    "content": "Lần thứ 3 mua điện thoại tại PhoneShop, luôn tin tưởng chất lượng.",
+    "product": "iPhone 13",
+    "city": "Bắc Ninh",
+    "date": "2024-09-17"
+  },
+  {
+    "id": 129,
+    "name": "Ngô Văn Hùng",
+    "rating": 5,
+    "content": "Tư vấn kỹ, giá cả hợp lý. Máy dùng rất mượt, pin tốt.",
+    "product": "Samsung Z Flip5",
+    "city": "Long An",
+    "date": "2024-10-18"
+  },
+  {
+    "id": 130,
+    "name": "Đỗ Thị Lan",
+    "rating": 5,
+    "content": "Shop uy tín, đổi trả nhanh khi có vấn đề nhỏ. Rất hài lòng.",
+    "product": "Redmi Note 13",
+    "city": "Bình Dương",
+    "date": "2024-11-19"
+  },
+  {
+    "id": 131,
+    "name": "Lý Quang Minh",
+    "rating": 5,
+    "content": "Giá rẻ hơn các shop khác mà chất lượng không kém. Sẽ giới thiệu bạn bè.",
+    "product": "iPhone 12",
+    "city": "Hà Nội",
+    "date": "2024-12-20"
+  },
+  {
+    "id": 132,
+    "name": "Mai Thị Nga",
+    "rating": 5,
+    "content": "Nhân viên giải đáp thắc mắc rất kỹ, mua máy cũ nhưng như mới.",
+    "product": "Pixel 8",
+    "city": "TP.HCM",
+    "date": "2024-01-21"
+  },
+  {
+    "id": 133,
+    "name": "Trương Văn Oanh",
+    "rating": 5,
+    "content": "Trả góp đơn giản, thủ tục nhanh. Rất tiện lợi cho sinh viên.",
+    "product": "Realme 12 Pro",
+    "city": "Đà Nẵng",
+    "date": "2024-02-22"
+  },
+  {
+    "id": 134,
+    "name": "Phan Thị Quỳnh",
+    "rating": 5,
+    "content": "Máy test kỹ trước khi giao, cảm ơn shop đã tư vấn nhiệt tình.",
+    "product": "Huawei P60",
+    "city": "Hải Phòng",
+    "date": "2024-03-23"
+  },
+  {
+    "id": 135,
+    "name": "Cao Văn Sơn",
+    "rating": 5,
+    "content": "Mua tặng người thân, hài lòng về chất lượng và dịch vụ.",
+    "product": "Nothing Phone 2",
+    "city": "Cần Thơ",
+    "date": "2024-04-24"
+  },
+  {
+    "id": 136,
+    "name": "Dương Thị Tâm",
+    "rating": 4,
+    "content": "Giao hàng tận nơi, kiểm tra máy trước mặt. Rất chuyên nghiệp.",
+    "product": "iPhone 15 Pro Max",
+    "city": "Biên Hòa",
+    "date": "2024-05-25"
+  },
+  {
+    "id": 137,
+    "name": "Hà Minh Uyên",
+    "rating": 5,
+    "content": "Pin trâu, camera đẹp. Dùng 2 tháng vẫn rất ổn.",
+    "product": "Samsung S24 Ultra",
+    "city": "Nha Trang",
+    "date": "2024-06-26"
+  },
+  {
+    "id": 138,
+    "name": "Khương Văn Vinh",
+    "rating": 5,
+    "content": "Shop bảo hành rõ ràng, có phiếu bảo hành đầy đủ.",
+    "product": "Xiaomi 14",
+    "city": "Huế",
+    "date": "2024-07-27"
+  },
+  {
+    "id": 139,
+    "name": "Lâm Thị Xuân",
+    "rating": 5,
+    "content": "Giá tốt, khuyến mãi hấp dẫn. Mua được máy mơ ước.",
+    "product": "iPhone 14",
+    "city": "Vinh",
+    "date": "2024-08-28"
+  },
+  {
+    "id": 140,
+    "name": "Mạc Văn Yên",
+    "rating": 5,
+    "content": "Tư vấn Zalo nhanh, đặt hàng xong 2 tiếng đã có máy.",
+    "product": "Galaxy A55",
+    "city": "Quy Nhon",
+    "date": "2024-09-01"
+  },
+  {
+    "id": 141,
+    "name": "Nguyễn Thị Ánh",
+    "rating": 5,
+    "content": "Máy cũ nhưng ngoại hình 99%, pin còn tốt. Rất đáng tiền.",
+    "product": "OPPO Reno11",
+    "city": "Bắc Ninh",
+    "date": "2024-10-02"
+  },
+  {
+    "id": 142,
+    "name": "Trần Văn Bách",
+    "rating": 5,
+    "content": "Đổi từ iPhone 13 lên 15 Pro, shop hỗ trợ đổi máy cũ giá tốt.",
+    "product": "vivo V29",
+    "city": "Long An",
+    "date": "2024-11-03"
+  },
+  {
+    "id": 143,
+    "name": "Lê Thị Cẩm",
+    "rating": 5,
+    "content": "Không bị ép mua phụ kiện, thái độ phục vụ rất tốt.",
+    "product": "iPhone 13",
+    "city": "Bình Dương",
+    "date": "2024-12-04"
+  },
+  {
+    "id": 144,
+    "name": "Phạm Văn Đạt",
+    "rating": 5,
+    "content": "Mua online qua Zalo, nhận máy đúng như mô tả. Uy tín.",
+    "product": "Samsung Z Flip5",
+    "city": "Hà Nội",
+    "date": "2024-01-05"
+  },
+  {
+    "id": 145,
+    "name": "Hoàng Thị Em",
+    "rating": 5,
+    "content": "Camera chụp đẹp, màn hình sáng. Dùng rất hài lòng.",
+    "product": "Redmi Note 13",
+    "city": "TP.HCM",
+    "date": "2024-02-06"
+  },
+  {
+    "id": 146,
+    "name": "Võ Văn Phúc",
+    "rating": 5,
+    "content": "Nhân viên am hiểu sản phẩm, gợi ý máy phù hợp ngân sách.",
+    "product": "iPhone 12",
+    "city": "Đà Nẵng",
+    "date": "2024-03-07"
+  },
+  {
+    "id": 147,
+    "name": "Đặng Thị Giang",
+    "rating": 5,
+    "content": "Bảo hành 12 tháng, yên tâm sử dụng lâu dài.",
+    "product": "Pixel 8",
+    "city": "Hải Phòng",
+    "date": "2024-04-08"
+  },
+  {
+    "id": 148,
+    "name": "Bùi Văn Hải",
+    "rating": 5,
+    "content": "Giá cạnh tranh nhất khu vực, đã so sánh nhiều nơi.",
+    "product": "Realme 12 Pro",
+    "city": "Cần Thơ",
+    "date": "2024-05-09"
+  },
+  {
+    "id": 149,
+    "name": "Ngô Thị Hương",
+    "rating": 5,
+    "content": "Máy unlock quốc tế, dùng SIM mọi nhà mạng thoải mái.",
+    "product": "Huawei P60",
+    "city": "Biên Hòa",
+    "date": "2024-06-10"
+  },
+  {
+    "id": 150,
+    "name": "Đỗ Văn Kiên",
+    "rating": 5,
+    "content": "Hộp đầy đủ phụ kiện, seal còn nguyên. Rất chuẩn hàng mới.",
+    "product": "Nothing Phone 2",
+    "city": "Nha Trang",
+    "date": "2024-07-11"
+  },
+  {
+    "id": 151,
+    "name": "Lý Thị Linh",
+    "rating": 5,
+    "content": "Mua máy ở đây rất hài lòng, giá tốt hơn nhiều chỗ khác. Nhân viên tư vấn nhiệt tình.",
+    "product": "iPhone 15 Pro Max",
+    "city": "Huế",
+    "date": "2024-08-12"
+  },
+  {
+    "id": 152,
+    "name": "Mai Văn Mạnh",
+    "rating": 5,
+    "content": "Máy mới nguyên seal, bảo hành đầy đủ. Giao hàng nhanh trong ngày, rất uy tín.",
+    "product": "Samsung S24 Ultra",
+    "city": "Vinh",
+    "date": "2024-09-13"
+  },
+  {
+    "id": 153,
+    "name": "Trương Thị Ngọc",
+    "rating": 4,
+    "content": "Lần thứ 3 mua điện thoại tại PhoneShop, luôn tin tưởng chất lượng.",
+    "product": "Xiaomi 14",
+    "city": "Quy Nhon",
+    "date": "2024-10-14"
+  },
+  {
+    "id": 154,
+    "name": "Phan Văn Phong",
+    "rating": 5,
+    "content": "Tư vấn kỹ, giá cả hợp lý. Máy dùng rất mượt, pin tốt.",
+    "product": "iPhone 14",
+    "city": "Bắc Ninh",
+    "date": "2024-11-15"
+  },
+  {
+    "id": 155,
+    "name": "Cao Thị Quyên",
+    "rating": 5,
+    "content": "Shop uy tín, đổi trả nhanh khi có vấn đề nhỏ. Rất hài lòng.",
+    "product": "Galaxy A55",
+    "city": "Long An",
+    "date": "2024-12-16"
+  },
+  {
+    "id": 156,
+    "name": "Dương Văn Sang",
+    "rating": 5,
+    "content": "Giá rẻ hơn các shop khác mà chất lượng không kém. Sẽ giới thiệu bạn bè.",
+    "product": "OPPO Reno11",
+    "city": "Bình Dương",
+    "date": "2024-01-17"
+  },
+  {
+    "id": 157,
+    "name": "Hà Thị Thúy",
+    "rating": 5,
+    "content": "Nhân viên giải đáp thắc mắc rất kỹ, mua máy cũ nhưng như mới.",
+    "product": "vivo V29",
+    "city": "Hà Nội",
+    "date": "2024-02-18"
+  },
+  {
+    "id": 158,
+    "name": "Khương Văn Tuấn",
+    "rating": 5,
+    "content": "Trả góp đơn giản, thủ tục nhanh. Rất tiện lợi cho sinh viên.",
+    "product": "iPhone 13",
+    "city": "TP.HCM",
+    "date": "2024-03-19"
+  },
+  {
+    "id": 159,
+    "name": "Lâm Thị Uyên",
+    "rating": 5,
+    "content": "Máy test kỹ trước khi giao, cảm ơn shop đã tư vấn nhiệt tình.",
+    "product": "Samsung Z Flip5",
+    "city": "Đà Nẵng",
+    "date": "2024-04-20"
+  },
+  {
+    "id": 160,
+    "name": "Mạc Văn Vương",
+    "rating": 5,
+    "content": "Mua tặng người thân, hài lòng về chất lượng và dịch vụ.",
+    "product": "Redmi Note 13",
+    "city": "Hải Phòng",
+    "date": "2024-05-21"
+  },
+  {
+    "id": 161,
+    "name": "Nguyễn Văn An",
+    "rating": 5,
+    "content": "Giao hàng tận nơi, kiểm tra máy trước mặt. Rất chuyên nghiệp.",
+    "product": "iPhone 12",
+    "city": "Cần Thơ",
+    "date": "2024-06-22"
+  },
+  {
+    "id": 162,
+    "name": "Trần Thị Bình",
+    "rating": 5,
+    "content": "Pin trâu, camera đẹp. Dùng 2 tháng vẫn rất ổn.",
+    "product": "Pixel 8",
+    "city": "Biên Hòa",
+    "date": "2024-07-23"
+  },
+  {
+    "id": 163,
+    "name": "Lê Hoàng Cường",
+    "rating": 5,
+    "content": "Shop bảo hành rõ ràng, có phiếu bảo hành đầy đủ.",
+    "product": "Realme 12 Pro",
+    "city": "Nha Trang",
+    "date": "2024-08-24"
+  },
+  {
+    "id": 164,
+    "name": "Phạm Thị Dung",
+    "rating": 5,
+    "content": "Giá tốt, khuyến mãi hấp dẫn. Mua được máy mơ ước.",
+    "product": "Huawei P60",
+    "city": "Huế",
+    "date": "2024-09-25"
+  },
+  {
+    "id": 165,
+    "name": "Hoàng Minh Em",
+    "rating": 5,
+    "content": "Tư vấn Zalo nhanh, đặt hàng xong 2 tiếng đã có máy.",
+    "product": "Nothing Phone 2",
+    "city": "Vinh",
+    "date": "2024-10-26"
+  },
+  {
+    "id": 166,
+    "name": "Võ Thị Phương",
+    "rating": 5,
+    "content": "Máy cũ nhưng ngoại hình 99%, pin còn tốt. Rất đáng tiền.",
+    "product": "iPhone 15 Pro Max",
+    "city": "Quy Nhon",
+    "date": "2024-11-27"
+  },
+  {
+    "id": 167,
+    "name": "Đặng Quốc Giang",
+    "rating": 5,
+    "content": "Đổi từ iPhone 13 lên 15 Pro, shop hỗ trợ đổi máy cũ giá tốt.",
+    "product": "Samsung S24 Ultra",
+    "city": "Bắc Ninh",
+    "date": "2024-12-28"
+  },
+  {
+    "id": 168,
+    "name": "Bùi Thị Hoa",
+    "rating": 5,
+    "content": "Không bị ép mua phụ kiện, thái độ phục vụ rất tốt.",
+    "product": "Xiaomi 14",
+    "city": "Long An",
+    "date": "2024-01-01"
+  },
+  {
+    "id": 169,
+    "name": "Ngô Văn Hùng",
+    "rating": 5,
+    "content": "Mua online qua Zalo, nhận máy đúng như mô tả. Uy tín.",
+    "product": "iPhone 14",
+    "city": "Bình Dương",
+    "date": "2024-02-02"
+  },
+  {
+    "id": 170,
+    "name": "Đỗ Thị Lan",
+    "rating": 4,
+    "content": "Camera chụp đẹp, màn hình sáng. Dùng rất hài lòng.",
+    "product": "Galaxy A55",
+    "city": "Hà Nội",
+    "date": "2024-03-03"
+  },
+  {
+    "id": 171,
+    "name": "Lý Quang Minh",
+    "rating": 5,
+    "content": "Nhân viên am hiểu sản phẩm, gợi ý máy phù hợp ngân sách.",
+    "product": "OPPO Reno11",
+    "city": "TP.HCM",
+    "date": "2024-04-04"
+  },
+  {
+    "id": 172,
+    "name": "Mai Thị Nga",
+    "rating": 5,
+    "content": "Bảo hành 12 tháng, yên tâm sử dụng lâu dài.",
+    "product": "vivo V29",
+    "city": "Đà Nẵng",
+    "date": "2024-05-05"
+  },
+  {
+    "id": 173,
+    "name": "Trương Văn Oanh",
+    "rating": 5,
+    "content": "Giá cạnh tranh nhất khu vực, đã so sánh nhiều nơi.",
+    "product": "iPhone 13",
+    "city": "Hải Phòng",
+    "date": "2024-06-06"
+  },
+  {
+    "id": 174,
+    "name": "Phan Thị Quỳnh",
+    "rating": 5,
+    "content": "Máy unlock quốc tế, dùng SIM mọi nhà mạng thoải mái.",
+    "product": "Samsung Z Flip5",
+    "city": "Cần Thơ",
+    "date": "2024-07-07"
+  },
+  {
+    "id": 175,
+    "name": "Cao Văn Sơn",
+    "rating": 5,
+    "content": "Hộp đầy đủ phụ kiện, seal còn nguyên. Rất chuẩn hàng mới.",
+    "product": "Redmi Note 13",
+    "city": "Biên Hòa",
+    "date": "2024-08-08"
+  },
+  {
+    "id": 176,
+    "name": "Dương Thị Tâm",
+    "rating": 5,
+    "content": "Mua máy ở đây rất hài lòng, giá tốt hơn nhiều chỗ khác. Nhân viên tư vấn nhiệt tình.",
+    "product": "iPhone 12",
+    "city": "Nha Trang",
+    "date": "2024-09-09"
+  },
+  {
+    "id": 177,
+    "name": "Hà Minh Uyên",
+    "rating": 5,
+    "content": "Máy mới nguyên seal, bảo hành đầy đủ. Giao hàng nhanh trong ngày, rất uy tín.",
+    "product": "Pixel 8",
+    "city": "Huế",
+    "date": "2024-10-10"
+  },
+  {
+    "id": 178,
+    "name": "Khương Văn Vinh",
+    "rating": 5,
+    "content": "Lần thứ 3 mua điện thoại tại PhoneShop, luôn tin tưởng chất lượng.",
+    "product": "Realme 12 Pro",
+    "city": "Vinh",
+    "date": "2024-11-11"
+  },
+  {
+    "id": 179,
+    "name": "Lâm Thị Xuân",
+    "rating": 5,
+    "content": "Tư vấn kỹ, giá cả hợp lý. Máy dùng rất mượt, pin tốt.",
+    "product": "Huawei P60",
+    "city": "Quy Nhon",
+    "date": "2024-12-12"
+  },
+  {
+    "id": 180,
+    "name": "Mạc Văn Yên",
+    "rating": 5,
+    "content": "Shop uy tín, đổi trả nhanh khi có vấn đề nhỏ. Rất hài lòng.",
+    "product": "Nothing Phone 2",
+    "city": "Bắc Ninh",
+    "date": "2024-01-13"
+  },
+  {
+    "id": 181,
+    "name": "Nguyễn Thị Ánh",
+    "rating": 5,
+    "content": "Giá rẻ hơn các shop khác mà chất lượng không kém. Sẽ giới thiệu bạn bè.",
+    "product": "iPhone 15 Pro Max",
+    "city": "Long An",
+    "date": "2024-02-14"
+  },
+  {
+    "id": 182,
+    "name": "Trần Văn Bách",
+    "rating": 5,
+    "content": "Nhân viên giải đáp thắc mắc rất kỹ, mua máy cũ nhưng như mới.",
+    "product": "Samsung S24 Ultra",
+    "city": "Bình Dương",
+    "date": "2024-03-15"
+  },
+  {
+    "id": 183,
+    "name": "Lê Thị Cẩm",
+    "rating": 5,
+    "content": "Trả góp đơn giản, thủ tục nhanh. Rất tiện lợi cho sinh viên.",
+    "product": "Xiaomi 14",
+    "city": "Hà Nội",
+    "date": "2024-04-16"
+  },
+  {
+    "id": 184,
+    "name": "Phạm Văn Đạt",
+    "rating": 5,
+    "content": "Máy test kỹ trước khi giao, cảm ơn shop đã tư vấn nhiệt tình.",
+    "product": "iPhone 14",
+    "city": "TP.HCM",
+    "date": "2024-05-17"
+  },
+  {
+    "id": 185,
+    "name": "Hoàng Thị Em",
+    "rating": 5,
+    "content": "Mua tặng người thân, hài lòng về chất lượng và dịch vụ.",
+    "product": "Galaxy A55",
+    "city": "Đà Nẵng",
+    "date": "2024-06-18"
+  },
+  {
+    "id": 186,
+    "name": "Võ Văn Phúc",
+    "rating": 5,
+    "content": "Giao hàng tận nơi, kiểm tra máy trước mặt. Rất chuyên nghiệp.",
+    "product": "OPPO Reno11",
+    "city": "Hải Phòng",
+    "date": "2024-07-19"
+  },
+  {
+    "id": 187,
+    "name": "Đặng Thị Giang",
+    "rating": 4,
+    "content": "Pin trâu, camera đẹp. Dùng 2 tháng vẫn rất ổn.",
+    "product": "vivo V29",
+    "city": "Cần Thơ",
+    "date": "2024-08-20"
+  },
+  {
+    "id": 188,
+    "name": "Bùi Văn Hải",
+    "rating": 5,
+    "content": "Shop bảo hành rõ ràng, có phiếu bảo hành đầy đủ.",
+    "product": "iPhone 13",
+    "city": "Biên Hòa",
+    "date": "2024-09-21"
+  },
+  {
+    "id": 189,
+    "name": "Ngô Thị Hương",
+    "rating": 5,
+    "content": "Giá tốt, khuyến mãi hấp dẫn. Mua được máy mơ ước.",
+    "product": "Samsung Z Flip5",
+    "city": "Nha Trang",
+    "date": "2024-10-22"
+  },
+  {
+    "id": 190,
+    "name": "Đỗ Văn Kiên",
+    "rating": 5,
+    "content": "Tư vấn Zalo nhanh, đặt hàng xong 2 tiếng đã có máy.",
+    "product": "Redmi Note 13",
+    "city": "Huế",
+    "date": "2024-11-23"
+  },
+  {
+    "id": 191,
+    "name": "Lý Thị Linh",
+    "rating": 5,
+    "content": "Máy cũ nhưng ngoại hình 99%, pin còn tốt. Rất đáng tiền.",
+    "product": "iPhone 12",
+    "city": "Vinh",
+    "date": "2024-12-24"
+  },
+  {
+    "id": 192,
+    "name": "Mai Văn Mạnh",
+    "rating": 5,
+    "content": "Đổi từ iPhone 13 lên 15 Pro, shop hỗ trợ đổi máy cũ giá tốt.",
+    "product": "Pixel 8",
+    "city": "Quy Nhon",
+    "date": "2024-01-25"
+  },
+  {
+    "id": 193,
+    "name": "Trương Thị Ngọc",
+    "rating": 5,
+    "content": "Không bị ép mua phụ kiện, thái độ phục vụ rất tốt.",
+    "product": "Realme 12 Pro",
+    "city": "Bắc Ninh",
+    "date": "2024-02-26"
+  },
+  {
+    "id": 194,
+    "name": "Phan Văn Phong",
+    "rating": 5,
+    "content": "Mua online qua Zalo, nhận máy đúng như mô tả. Uy tín.",
+    "product": "Huawei P60",
+    "city": "Long An",
+    "date": "2024-03-27"
+  },
+  {
+    "id": 195,
+    "name": "Cao Thị Quyên",
+    "rating": 5,
+    "content": "Camera chụp đẹp, màn hình sáng. Dùng rất hài lòng.",
+    "product": "Nothing Phone 2",
+    "city": "Bình Dương",
+    "date": "2024-04-28"
+  },
+  {
+    "id": 196,
+    "name": "Dương Văn Sang",
+    "rating": 5,
+    "content": "Nhân viên am hiểu sản phẩm, gợi ý máy phù hợp ngân sách.",
+    "product": "iPhone 15 Pro Max",
+    "city": "Hà Nội",
+    "date": "2024-05-01"
+  },
+  {
+    "id": 197,
+    "name": "Hà Thị Thúy",
+    "rating": 5,
+    "content": "Bảo hành 12 tháng, yên tâm sử dụng lâu dài.",
+    "product": "Samsung S24 Ultra",
+    "city": "TP.HCM",
+    "date": "2024-06-02"
+  },
+  {
+    "id": 198,
+    "name": "Khương Văn Tuấn",
+    "rating": 5,
+    "content": "Giá cạnh tranh nhất khu vực, đã so sánh nhiều nơi.",
+    "product": "Xiaomi 14",
+    "city": "Đà Nẵng",
+    "date": "2024-07-03"
+  },
+  {
+    "id": 199,
+    "name": "Lâm Thị Uyên",
+    "rating": 5,
+    "content": "Máy unlock quốc tế, dùng SIM mọi nhà mạng thoải mái.",
+    "product": "iPhone 14",
+    "city": "Hải Phòng",
+    "date": "2024-08-04"
+  },
+  {
+    "id": 200,
+    "name": "Mạc Văn Vương",
+    "rating": 5,
+    "content": "Hộp đầy đủ phụ kiện, seal còn nguyên. Rất chuẩn hàng mới.",
+    "product": "Galaxy A55",
+    "city": "Cần Thơ",
+    "date": "2024-09-05"
+  }
+]

@@ -161,7 +161,7 @@ export function ProductCard({ product }: ProductCardProps) {
               sx={{
                 color: "price.main",
                 fontWeight: 700,
-                fontSize: 20,
+                fontSize: { xs: 18, md: 20 },
                 letterSpacing: "-0.01em",
               }}
             >

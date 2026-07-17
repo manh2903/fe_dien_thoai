@@ -40,13 +40,13 @@ export function FeaturesBanner() {
     <Box
       sx={{
         bgcolor: "#F8FAFC",
-        py: 6,
+        py: { xs: 4, md: 6 },
         borderTop: 1,
         borderBottom: 1,
         borderColor: "divider",
       }}
     >
-      <Container maxWidth="xl">
+      <Container maxWidth="xl" sx={{ px: { xs: 2, sm: 3 } }}>
         <Grid container spacing={4}>
           {features.map(({ icon: Icon, title, desc }) => (
             <Grid key={title} size={{ xs: 12, sm: 6, md: 3 }}>

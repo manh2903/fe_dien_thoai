@@ -27,7 +27,7 @@ export async function Footer() {
       id="contact"
       sx={{ bgcolor: "#f5f3f4", borderTop: 1, borderColor: "divider", mt: "auto" }}
     >
-      <Container maxWidth="xl" sx={{ py: 6 }}>
+      <Container maxWidth="xl" sx={{ py: { xs: 4, md: 6 }, px: { xs: 2, sm: 3 } }}>
         <Grid container spacing={4}>
           <Grid size={{ xs: 12, md: 3 }}>
             <Typography
