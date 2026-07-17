@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
+import { Button } from "@mui/material";
 import { createClient } from "@/lib/supabase/client";
 
 interface DeleteButtonProps {
@@ -25,12 +26,14 @@ export function DeleteButton({ table, id, label = "Xóa" }: DeleteButtonProps) {
   }
 
   return (
-    <button
+    <Button
+      color="error"
+      size="small"
       onClick={handleDelete}
       disabled={loading}
-      className="text-sm text-red-600 hover:text-red-700 disabled:opacity-50"
+      sx={{ minWidth: "auto", p: 0 }}
     >
       {loading ? "..." : label}
-    </button>
+    </Button>
   );
 }

@@ -1,80 +1,165 @@
 import Link from "next/link";
-import { Plus } from "lucide-react";
+import {
+  Box,
+  Button,
+  Chip,
+  Paper,
+  Stack,
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableRow,
+  Typography,
+} from "@mui/material";
+import AddIcon from "@mui/icons-material/Add";
 import { createClient } from "@/lib/supabase/server";
 import { formatPrice } from "@/lib/utils";
 import { DeleteButton } from "@/components/admin/DeleteButton";
+import { Pagination } from "@/components/Pagination";
 import type { Product } from "@/types/database";
 
-export default async function AdminProductsPage() {
+const PAGE_SIZE = 20;
+
+interface PageProps {
+  searchParams: Promise<{ page?: string }>;
+}
+
+export default async function AdminProductsPage({ searchParams }: PageProps) {
+  const { page: pageParam } = await searchParams;
+  const currentPage = Math.max(1, parseInt(pageParam ?? "1", 10));
+
   const supabase = await createClient();
-  const { data: products } = await supabase
+  const from = (currentPage - 1) * PAGE_SIZE;
+  const to = from + PAGE_SIZE - 1;
+
+  const { data: products, count } = await supabase
     .from("products")
-    .select("*")
-    .order("created_at", { ascending: false });
+    .select("*", { count: "exact" })
+    .order("created_at", { ascending: false })
+    .range(from, to);
+
+  const totalPages = Math.ceil((count ?? 0) / PAGE_SIZE);
 
   return (
-    <div className="p-6 md:p-8">
-      <div className="mb-6 flex items-center justify-between">
-        <h1 className="text-2xl font-bold">Quản lý sản phẩm</h1>
-        <Link
-          href="/admin/products/new"
-          className="inline-flex items-center gap-1 rounded-lg bg-blue-600 px-4 py-2 text-sm font-medium text-white hover:bg-blue-700"
-        >
-          <Plus className="h-4 w-4" />
-          Thêm sản phẩm
+    <Box sx={{ p: { xs: 2, md: 4 } }}>
+      <Stack
+        direction="row"
+        sx={{
+          alignItems: "center",
+          justifyContent: "space-between",
+          mb: 3
+        }}>
+        <Box>
+          <Typography variant="h5" sx={{
+            fontWeight: 700
+          }}>
+            Quản lý sản phẩm
+          </Typography>
+          {count != null && (
+            <Typography variant="body2" sx={{
+              color: "text.secondary"
+            }}>
+              {count} sản phẩm
+            </Typography>
+          )}
+        </Box>
+        <Link href="/admin/products/new" style={{ textDecoration: "none" }}>
+          <Button
+            variant="contained"
+            color="secondary"
+            startIcon={<AddIcon />}
+          >
+            Thêm sản phẩm
+          </Button>
         </Link>
-      </div>
-
+      </Stack>
       {!products || products.length === 0 ? (
-        <div className="rounded-xl border border-dashed border-zinc-300 bg-white py-12 text-center text-zinc-500">
-          Chưa có sản phẩm. Hãy thêm sản phẩm đầu tiên.
-        </div>
+        <Paper
+          elevation={0}
+          sx={{
+            border: "1px dashed",
+            borderColor: "divider",
+            py: 8,
+            textAlign: "center",
+            borderRadius: 3,
+          }}
+        >
+          <Typography sx={{
+            color: "text.secondary"
+          }}>
+            Chưa có sản phẩm. Hãy thêm sản phẩm đầu tiên.
+          </Typography>
+        </Paper>
       ) : (
-        <div className="overflow-hidden rounded-xl border border-zinc-200 bg-white">
-          <table className="w-full text-left text-sm">
-            <thead className="border-b border-zinc-200 bg-zinc-50">
-              <tr>
-                <th className="px-4 py-3 font-medium">Tên</th>
-                <th className="px-4 py-3 font-medium">Hãng</th>
-                <th className="px-4 py-3 font-medium">Giá</th>
-                <th className="px-4 py-3 font-medium">Trạng thái</th>
-                <th className="px-4 py-3 font-medium">Thao tác</th>
-              </tr>
-            </thead>
-            <tbody>
-              {(products as Product[]).map((product) => (
-                <tr key={product.id} className="border-b border-zinc-100">
-                  <td className="px-4 py-3 font-medium">{product.name}</td>
-                  <td className="px-4 py-3 text-zinc-600">{product.brand}</td>
-                  <td className="px-4 py-3">{formatPrice(product.price)}</td>
-                  <td className="px-4 py-3">
-                    <span
-                      className={`rounded-full px-2 py-0.5 text-xs font-medium ${
-                        product.is_active
-                          ? "bg-emerald-100 text-emerald-700"
-                          : "bg-zinc-100 text-zinc-500"
-                      }`}
-                    >
-                      {product.is_active ? "Hiển thị" : "Ẩn"}
-                    </span>
-                  </td>
-                  <td className="px-4 py-3">
-                    <div className="flex items-center gap-3">
-                      <Link
-                        href={`/admin/products/${product.id}/edit`}
-                        className="text-blue-600 hover:underline"
-                      >
-                        Sửa
-                      </Link>
-                      <DeleteButton table="products" id={product.id} />
-                    </div>
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
+        <>
+          <Paper
+            elevation={0}
+            sx={{ border: 1, borderColor: "divider", borderRadius: 3, overflow: "hidden" }}
+          >
+            <Table size="small">
+              <TableHead sx={{ bgcolor: "#F8FAFC" }}>
+                <TableRow>
+                  <TableCell>Tên</TableCell>
+                  <TableCell>Hãng</TableCell>
+                  <TableCell>Giá</TableCell>
+                  <TableCell>Trạng thái</TableCell>
+                  <TableCell>Thao tác</TableCell>
+                </TableRow>
+              </TableHead>
+              <TableBody>
+                {(products as Product[]).map((product) => (
+                  <TableRow key={product.id} hover>
+                    <TableCell>
+                      <Typography sx={{
+                        fontWeight: 600
+                      }}>{product.name}</Typography>
+                    </TableCell>
+                    <TableCell>{product.brand}</TableCell>
+                    <TableCell>{formatPrice(product.price)}</TableCell>
+                    <TableCell>
+                      <Chip
+                        size="small"
+                        label={product.is_active ? "Hiển thị" : "Ẩn"}
+                        color={product.is_active ? "success" : "default"}
+                      />
+                    </TableCell>
+                    <TableCell>
+                      <Stack direction="row" spacing={1} sx={{
+                        alignItems: "center"
+                      }}>
+                        <Link
+                          href={`/admin/products/${product.id}/edit`}
+                          style={{ textDecoration: "none" }}
+                        >
+                          <Button
+                            size="small"
+                            color="secondary"
+                            sx={{ minWidth: "auto", p: 0 }}
+                          >
+                            Sửa
+                          </Button>
+                        </Link>
+                        <DeleteButton table="products" id={product.id} />
+                      </Stack>
+                    </TableCell>
+                  </TableRow>
+                ))}
+              </TableBody>
+            </Table>
+          </Paper>
+
+          {totalPages > 1 && (
+            <Box sx={{ mt: 3 }}>
+              <Pagination
+                currentPage={currentPage}
+                totalPages={totalPages}
+                basePath="/admin/products"
+              />
+            </Box>
+          )}
+        </>
       )}
-    </div>
+    </Box>
   );
 }

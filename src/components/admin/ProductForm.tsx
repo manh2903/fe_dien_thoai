@@ -2,6 +2,20 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
+import {
+  Alert,
+  Box,
+  Button,
+  Checkbox,
+  FormControl,
+  FormControlLabel,
+  Grid,
+  InputLabel,
+  MenuItem,
+  Select,
+  Stack,
+  TextField,
+} from "@mui/material";
 import { createClient } from "@/lib/supabase/client";
 import type { Product, ProductFormData } from "@/types/database";
 
@@ -74,148 +88,125 @@ export function ProductForm({ product }: ProductFormProps) {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="max-w-2xl space-y-5">
-      {error && (
-        <div className="rounded-lg bg-red-50 px-4 py-3 text-sm text-red-600">
-          {error}
-        </div>
-      )}
+    <Box component="form" onSubmit={handleSubmit} sx={{ maxWidth: 720 }}>
+      <Stack spacing={2.5}>
+        {error && <Alert severity="error">{error}</Alert>}
 
-      <div className="grid gap-4 sm:grid-cols-2">
-        <Field label="Tên sản phẩm *">
-          <input
-            required
-            value={form.name}
-            onChange={(e) => updateField("name", e.target.value)}
-            className="input"
-            placeholder="iPhone 15 Pro Max"
-          />
-        </Field>
-        <Field label="Hãng *">
-          <input
-            required
-            value={form.brand}
-            onChange={(e) => updateField("brand", e.target.value)}
-            className="input"
-            placeholder="Apple"
-          />
-        </Field>
-      </div>
+        <Grid container spacing={2}>
+          <Grid size={{ xs: 12, sm: 6 }}>
+            <TextField
+              label="Tên sản phẩm"
+              required
+              fullWidth
+              value={form.name}
+              onChange={(e) => updateField("name", e.target.value)}
+            />
+          </Grid>
+          <Grid size={{ xs: 12, sm: 6 }}>
+            <TextField
+              label="Hãng"
+              required
+              fullWidth
+              value={form.brand}
+              onChange={(e) => updateField("brand", e.target.value)}
+            />
+          </Grid>
+          <Grid size={{ xs: 12, sm: 6 }}>
+            <TextField
+              label="Giá (VND)"
+              type="number"
+              required
+              fullWidth
+              value={form.price}
+              onChange={(e) => updateField("price", Number(e.target.value))}
+              slotProps={{ htmlInput: { min: 0 } }}
+            />
+          </Grid>
+          <Grid size={{ xs: 12, sm: 6 }}>
+            <FormControl fullWidth>
+              <InputLabel>Tình trạng</InputLabel>
+              <Select
+                label="Tình trạng"
+                value={form.condition}
+                onChange={(e) =>
+                  updateField("condition", e.target.value as "new" | "used")
+                }
+              >
+                <MenuItem value="new">Mới</MenuItem>
+                <MenuItem value="used">Cũ</MenuItem>
+              </Select>
+            </FormControl>
+          </Grid>
+          <Grid size={{ xs: 12, sm: 4 }}>
+            <TextField
+              label="Bộ nhớ"
+              fullWidth
+              value={form.storage}
+              onChange={(e) => updateField("storage", e.target.value)}
+              placeholder="256GB"
+            />
+          </Grid>
+          <Grid size={{ xs: 12, sm: 4 }}>
+            <TextField
+              label="RAM"
+              fullWidth
+              value={form.ram}
+              onChange={(e) => updateField("ram", e.target.value)}
+              placeholder="8GB"
+            />
+          </Grid>
+          <Grid size={{ xs: 12, sm: 4 }}>
+            <TextField
+              label="Màu sắc"
+              fullWidth
+              value={form.color}
+              onChange={(e) => updateField("color", e.target.value)}
+            />
+          </Grid>
+          <Grid size={12}>
+            <TextField
+              label="URL ảnh"
+              fullWidth
+              value={form.image_url}
+              onChange={(e) => updateField("image_url", e.target.value)}
+            />
+          </Grid>
+          <Grid size={12}>
+            <TextField
+              label="Mô tả"
+              fullWidth
+              multiline
+              rows={4}
+              value={form.description}
+              onChange={(e) => updateField("description", e.target.value)}
+            />
+          </Grid>
+        </Grid>
 
-      <div className="grid gap-4 sm:grid-cols-2">
-        <Field label="Giá (VND) *">
-          <input
-            required
-            type="number"
-            min={0}
-            value={form.price}
-            onChange={(e) => updateField("price", Number(e.target.value))}
-            className="input"
-          />
-        </Field>
-        <Field label="Tình trạng">
-          <select
-            value={form.condition}
-            onChange={(e) =>
-              updateField("condition", e.target.value as "new" | "used")
-            }
-            className="input"
+        <FormControlLabel
+          control={
+            <Checkbox
+              checked={form.is_active}
+              onChange={(e) => updateField("is_active", e.target.checked)}
+            />
+          }
+          label="Hiển thị trên cửa hàng"
+        />
+
+        <Stack direction="row" spacing={1.5}>
+          <Button
+            type="submit"
+            variant="contained"
+            color="secondary"
+            disabled={loading}
           >
-            <option value="new">Mới</option>
-            <option value="used">Cũ</option>
-          </select>
-        </Field>
-      </div>
-
-      <div className="grid gap-4 sm:grid-cols-3">
-        <Field label="Bộ nhớ">
-          <input
-            value={form.storage}
-            onChange={(e) => updateField("storage", e.target.value)}
-            className="input"
-            placeholder="256GB"
-          />
-        </Field>
-        <Field label="RAM">
-          <input
-            value={form.ram}
-            onChange={(e) => updateField("ram", e.target.value)}
-            className="input"
-            placeholder="8GB"
-          />
-        </Field>
-        <Field label="Màu sắc">
-          <input
-            value={form.color}
-            onChange={(e) => updateField("color", e.target.value)}
-            className="input"
-            placeholder="Đen"
-          />
-        </Field>
-      </div>
-
-      <Field label="URL ảnh">
-        <input
-          value={form.image_url}
-          onChange={(e) => updateField("image_url", e.target.value)}
-          className="input"
-          placeholder="https://..."
-        />
-      </Field>
-
-      <Field label="Mô tả">
-        <textarea
-          rows={4}
-          value={form.description}
-          onChange={(e) => updateField("description", e.target.value)}
-          className="input resize-none"
-          placeholder="Mô tả chi tiết sản phẩm..."
-        />
-      </Field>
-
-      <label className="flex items-center gap-2 text-sm text-zinc-700">
-        <input
-          type="checkbox"
-          checked={form.is_active}
-          onChange={(e) => updateField("is_active", e.target.checked)}
-          className="h-4 w-4 rounded border-zinc-300"
-        />
-        Hiển thị trên cửa hàng
-      </label>
-
-      <div className="flex gap-3 pt-2">
-        <button
-          type="submit"
-          disabled={loading}
-          className="rounded-lg bg-blue-600 px-5 py-2.5 text-sm font-medium text-white transition hover:bg-blue-700 disabled:opacity-50"
-        >
-          {loading ? "Đang lưu..." : product ? "Cập nhật" : "Thêm sản phẩm"}
-        </button>
-        <button
-          type="button"
-          onClick={() => router.back()}
-          className="rounded-lg border border-zinc-200 px-5 py-2.5 text-sm text-zinc-600 hover:bg-zinc-50"
-        >
-          Hủy
-        </button>
-      </div>
-    </form>
-  );
-}
-
-function Field({
-  label,
-  children,
-}: {
-  label: string;
-  children: React.ReactNode;
-}) {
-  return (
-    <label className="block">
-      <span className="mb-1.5 block text-sm font-medium text-zinc-700">
-        {label}
-      </span>
-      {children}
-    </label>
+            {loading ? "Đang lưu..." : product ? "Cập nhật" : "Thêm sản phẩm"}
+          </Button>
+          <Button variant="outlined" onClick={() => router.back()}>
+            Hủy
+          </Button>
+        </Stack>
+      </Stack>
+    </Box>
   );
 }

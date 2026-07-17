@@ -1,3 +1,4 @@
+import { Box } from "@mui/material";
 import { AdminNav } from "@/components/admin/AdminNav";
 
 export default function DashboardLayout({
@@ -6,9 +7,9 @@ export default function DashboardLayout({
   children: React.ReactNode;
 }) {
   return (
-    <div className="flex min-h-screen bg-zinc-50">
+    <Box sx={{ display: "flex", minHeight: "100vh", bgcolor: "#F8FAFC" }}>
       <AdminNav />
-      <div className="flex-1 overflow-auto">{children}</div>
-    </div>
+      <Box sx={{ flex: 1, overflow: "auto" }}>{children}</Box>
+    </Box>
   );
 }

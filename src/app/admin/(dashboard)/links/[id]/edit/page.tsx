@@ -1,4 +1,5 @@
 import { notFound } from "next/navigation";
+import { Box, Typography } from "@mui/material";
 import { createClient } from "@/lib/supabase/server";
 import { LinkForm } from "@/components/admin/LinkForm";
 import type { ContactLink } from "@/types/database";
@@ -20,9 +21,16 @@ export default async function EditLinkPage({ params }: PageProps) {
   if (!link) notFound();
 
   return (
-    <div className="p-6 md:p-8">
-      <h1 className="mb-6 text-2xl font-bold">Sửa link liên hệ</h1>
+    <Box sx={{ p: { xs: 2, md: 4 } }}>
+      <Typography
+        variant="h5"
+        sx={{
+          fontWeight: 700,
+          mb: 3
+        }}>
+        Sửa link liên hệ
+      </Typography>
       <LinkForm link={link as ContactLink} />
-    </div>
+    </Box>
   );
 }

@@ -1,75 +1,147 @@
-import {
-  Phone,
-  MessageCircle,
-  Globe,
-  Link as LinkIcon,
-  ExternalLink,
-  Share2,
-  Users,
-} from "lucide-react";
-import type { ContactLink, ContactIcon } from "@/types/database";
+"use client";
 
-const iconMap: Record<ContactIcon, React.ComponentType<{ className?: string }>> = {
-  zalo: MessageCircle,
-  phone: Phone,
-  facebook: Share2,
-  messenger: MessageCircle,
-  tiktok: ExternalLink,
-  instagram: Users,
-  website: Globe,
+import {
+  Box,
+  Fab,
+  Stack,
+  Tooltip,
+  Typography,
+  Button,
+} from "@mui/material";
+import CallIcon from "@mui/icons-material/Call";
+import ChatBubbleIcon from "@mui/icons-material/ChatBubble";
+import ShareIcon from "@mui/icons-material/Share";
+import LanguageIcon from "@mui/icons-material/Language";
+import LinkIcon from "@mui/icons-material/Link";
+import ForumIcon from "@mui/icons-material/Forum";
+import InstagramIcon from "@mui/icons-material/Instagram";
+import type { ContactLink, ContactIcon } from "@/types/database";
+import type { SvgIconComponent } from "@mui/icons-material";
+
+const iconMap: Record<ContactIcon, SvgIconComponent> = {
+  zalo: ChatBubbleIcon,
+  phone: CallIcon,
+  facebook: ShareIcon,
+  messenger: ForumIcon,
+  tiktok: LinkIcon,
+  instagram: InstagramIcon,
+  website: LanguageIcon,
   link: LinkIcon,
+};
+
+const colorMap: Partial<Record<ContactIcon, string>> = {
+  zalo: "#0068FF",
+  phone: "#10B981",
+  facebook: "#1877F2",
+  messenger: "#0084FF",
 };
 
 interface ContactLinksProps {
   links: ContactLink[];
-  variant?: "footer" | "floating";
+  variant?: "footer" | "floating" | "inline";
 }
 
 export function ContactLinks({ links, variant = "footer" }: ContactLinksProps) {
   if (links.length === 0) {
-    return <p className="text-sm text-zinc-400">Chưa có link liên hệ</p>;
+    return (
+      <Typography variant="body2" sx={{
+        color: "text.secondary"
+      }}>Chưa có link liên hệ
+              </Typography>
+    );
   }
 
   if (variant === "floating") {
     return (
-      <div className="fixed bottom-6 right-6 z-40 flex flex-col gap-2">
+      <Stack
+        spacing={2}
+        sx={{ position: "fixed", bottom: 32, right: 32, zIndex: 100 }}
+      >
+        {links.map((link) => {
+          const Icon = iconMap[link.icon] ?? LinkIcon;
+          const bg = colorMap[link.icon] ?? "#2563EB";
+          return (
+            <Tooltip key={link.id} title={link.title} placement="left">
+              <Fab
+                component="a"
+                href={link.url}
+                target={link.url.startsWith("tel:") ? undefined : "_blank"}
+                rel="noopener noreferrer"
+                size="medium"
+                sx={{
+                  bgcolor: bg,
+                  color: "#fff",
+                  boxShadow: 3,
+                  "&:hover": { bgcolor: bg, transform: "scale(1.1)" },
+                }}
+              >
+                <Icon />
+              </Fab>
+            </Tooltip>
+          );
+        })}
+      </Stack>
+    );
+  }
+
+  if (variant === "inline") {
+    return (
+      <Stack direction="row" spacing={1.5} useFlexGap sx={{
+        flexWrap: "wrap"
+      }}>
         {links.map((link) => {
           const Icon = iconMap[link.icon] ?? LinkIcon;
           return (
-            <a
+            <Button
               key={link.id}
+              component="a"
               href={link.url}
-              target="_blank"
+              target={link.url.startsWith("tel:") ? undefined : "_blank"}
               rel="noopener noreferrer"
-              title={link.title}
-              className="flex h-12 w-12 items-center justify-center rounded-full bg-blue-600 text-white shadow-lg transition hover:scale-110 hover:bg-blue-700"
+              variant="outlined"
+              startIcon={<Icon />}
+              sx={{
+                borderColor: "rgba(255,255,255,0.3)",
+                color: "#fff",
+                "&:hover": {
+                  borderColor: "#fff",
+                  bgcolor: "rgba(255,255,255,0.1)",
+                },
+              }}
             >
-              <Icon className="h-5 w-5" />
-            </a>
+              {link.title}
+            </Button>
           );
         })}
-      </div>
+      </Stack>
     );
   }
 
   return (
-    <ul className="flex flex-wrap gap-2">
+    <Stack spacing={2}>
       {links.map((link) => {
         const Icon = iconMap[link.icon] ?? LinkIcon;
         return (
-          <li key={link.id}>
-            <a
-              href={link.url}
-              target={link.url.startsWith("tel:") ? undefined : "_blank"}
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-lg border border-zinc-200 bg-white px-3 py-2 text-sm text-zinc-700 transition hover:border-blue-300 hover:text-blue-600"
-            >
-              <Icon className="h-4 w-4" />
-              {link.title}
-            </a>
-          </li>
+          <Box
+            key={link.id}
+            component="a"
+            href={link.url}
+            target={link.url.startsWith("tel:") ? undefined : "_blank"}
+            rel="noopener noreferrer"
+            sx={{
+              display: "flex",
+              alignItems: "center",
+              gap: 1.5,
+              color: "text.secondary",
+              textDecoration: "none",
+              "&:hover": { color: "secondary.main" },
+            }}
+          >
+            <Icon sx={{ fontSize: 20 }} />
+            <Typography variant="body1">{link.title}</Typography>
+          </Box>
         );
       })}
-    </ul>
+    </Stack>
   );
 }

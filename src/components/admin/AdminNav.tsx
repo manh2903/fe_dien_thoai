@@ -2,13 +2,25 @@
 
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
+import {
+  Box,
+  Button,
+  Divider,
+  List,
+  ListItemButton,
+  ListItemIcon,
+  ListItemText,
+  Typography,
+} from "@mui/material";
+import Inventory2OutlinedIcon from "@mui/icons-material/Inventory2Outlined";
+import LinkOutlinedIcon from "@mui/icons-material/LinkOutlined";
+import LogoutIcon from "@mui/icons-material/Logout";
+import StorefrontOutlinedIcon from "@mui/icons-material/StorefrontOutlined";
 import { createClient } from "@/lib/supabase/client";
-import { cn } from "@/lib/utils";
-import { LogOut, Link2, Package } from "lucide-react";
 
 const navItems = [
-  { href: "/admin/products", label: "Sản phẩm", icon: Package },
-  { href: "/admin/links", label: "Link liên hệ", icon: Link2 },
+  { href: "/admin/products", label: "Sản phẩm", icon: Inventory2OutlinedIcon },
+  { href: "/admin/links", label: "Link liên hệ", icon: LinkOutlinedIcon },
 ];
 
 export function AdminNav() {
@@ -23,42 +35,65 @@ export function AdminNav() {
   }
 
   return (
-    <aside className="w-56 shrink-0 border-r border-zinc-200 bg-white">
-      <div className="flex h-16 items-center border-b border-zinc-200 px-4 font-semibold">
-        Admin Panel
-      </div>
-      <nav className="p-3">
-        {navItems.map(({ href, label, icon: Icon }) => (
-          <Link
-            key={href}
-            href={href}
-            className={cn(
-              "mb-1 flex items-center gap-2 rounded-lg px-3 py-2 text-sm transition",
-              pathname.startsWith(href)
-                ? "bg-blue-50 font-medium text-blue-700"
-                : "text-zinc-600 hover:bg-zinc-50"
-            )}
-          >
-            <Icon className="h-4 w-4" />
-            {label}
-          </Link>
-        ))}
-      </nav>
-      <div className="border-t border-zinc-200 p-3">
-        <Link
+    <Box
+      component="aside"
+      sx={{
+        width: 240,
+        flexShrink: 0,
+        borderRight: 1,
+        borderColor: "divider",
+        bgcolor: "background.paper",
+        display: "flex",
+        flexDirection: "column",
+        minHeight: "100vh",
+      }}
+    >
+      <Box sx={{ height: 64, display: "flex", alignItems: "center", px: 2.5 }}>
+        <Typography sx={{
+          fontWeight: 700
+        }}>Admin Panel</Typography>
+      </Box>
+      <Divider />
+      <List sx={{ flex: 1, px: 1, py: 1.5 }}>
+        {navItems.map(({ href, label, icon: Icon }) => {
+          const active = pathname.startsWith(href);
+          return (
+            <ListItemButton
+              key={href}
+              component={Link}
+              href={href}
+              selected={active}
+              sx={{ borderRadius: 2, mb: 0.5 }}
+            >
+              <ListItemIcon sx={{ minWidth: 36 }}>
+                <Icon fontSize="small" color={active ? "secondary" : "inherit"} />
+              </ListItemIcon>
+              <ListItemText primary={label} />
+            </ListItemButton>
+          );
+        })}
+      </List>
+      <Divider />
+      <Box sx={{ p: 1.5 }}>
+        <Button
+          component={Link}
           href="/"
-          className="mb-2 block rounded-lg px-3 py-2 text-sm text-zinc-600 hover:bg-zinc-50"
+          fullWidth
+          startIcon={<StorefrontOutlinedIcon />}
+          sx={{ justifyContent: "flex-start", mb: 1, color: "text.secondary" }}
         >
-          ← Xem cửa hàng
-        </Link>
-        <button
+          Xem cửa hàng
+        </Button>
+        <Button
+          fullWidth
+          color="error"
+          startIcon={<LogoutIcon />}
           onClick={handleLogout}
-          className="flex w-full items-center gap-2 rounded-lg px-3 py-2 text-sm text-red-600 hover:bg-red-50"
+          sx={{ justifyContent: "flex-start" }}
         >
-          <LogOut className="h-4 w-4" />
           Đăng xuất
-        </button>
-      </div>
-    </aside>
+        </Button>
+      </Box>
+    </Box>
   );
 }

@@ -1,3 +1,4 @@
+import { Box } from "@mui/material";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 
@@ -7,10 +8,12 @@ export default function ShopLayout({
   children: React.ReactNode;
 }) {
   return (
-    <div className="flex min-h-full flex-col">
+    <Box sx={{ display: "flex", flexDirection: "column", minHeight: "100%" }}>
       <Header />
-      <main className="flex-1">{children}</main>
+      <Box component="main" sx={{ flex: 1 }}>
+        {children}
+      </Box>
       <Footer />
-    </div>
+    </Box>
   );
 }

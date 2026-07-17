@@ -1,83 +1,177 @@
 import Link from "next/link";
-import { Plus } from "lucide-react";
+import {
+  Box,
+  Button,
+  Chip,
+  Paper,
+  Stack,
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableRow,
+  Typography,
+} from "@mui/material";
+import AddIcon from "@mui/icons-material/Add";
 import { createClient } from "@/lib/supabase/server";
 import { DeleteButton } from "@/components/admin/DeleteButton";
+import { Pagination } from "@/components/Pagination";
 import type { ContactLink } from "@/types/database";
 
-export default async function AdminLinksPage() {
+const PAGE_SIZE = 50;
+
+interface PageProps {
+  searchParams: Promise<{ page?: string }>;
+}
+
+export default async function AdminLinksPage({ searchParams }: PageProps) {
+  const { page: pageParam } = await searchParams;
+  const currentPage = Math.max(1, parseInt(pageParam ?? "1", 10));
+
   const supabase = await createClient();
-  const { data: links } = await supabase
+  const from = (currentPage - 1) * PAGE_SIZE;
+  const to = from + PAGE_SIZE - 1;
+
+  const { data: links, count } = await supabase
     .from("contact_links")
-    .select("*")
-    .order("sort_order", { ascending: true });
+    .select("*", { count: "exact" })
+    .order("sort_order", { ascending: true })
+    .range(from, to);
+
+  const totalPages = Math.ceil((count ?? 0) / PAGE_SIZE);
 
   return (
-    <div className="p-6 md:p-8">
-      <div className="mb-6 flex items-center justify-between">
-        <h1 className="text-2xl font-bold">Quản lý link liên hệ</h1>
-        <Link
-          href="/admin/links/new"
-          className="inline-flex items-center gap-1 rounded-lg bg-blue-600 px-4 py-2 text-sm font-medium text-white hover:bg-blue-700"
-        >
-          <Plus className="h-4 w-4" />
-          Thêm link
+    <Box sx={{ p: { xs: 2, md: 4 } }}>
+      <Stack
+        direction="row"
+        sx={{
+          alignItems: "center",
+          justifyContent: "space-between",
+          mb: 3
+        }}>
+        <Box>
+          <Typography variant="h5" sx={{
+            fontWeight: 700
+          }}>
+            Quản lý link liên hệ
+          </Typography>
+          {count != null && (
+            <Typography variant="body2" sx={{
+              color: "text.secondary"
+            }}>
+              {count} link
+            </Typography>
+          )}
+        </Box>
+        <Link href="/admin/links/new" style={{ textDecoration: "none" }}>
+          <Button
+            variant="contained"
+            color="secondary"
+            startIcon={<AddIcon />}
+          >
+            Thêm link
+          </Button>
         </Link>
-      </div>
-
+      </Stack>
       {!links || links.length === 0 ? (
-        <div className="rounded-xl border border-dashed border-zinc-300 bg-white py-12 text-center text-zinc-500">
-          Chưa có link liên hệ. Thêm Zalo, Hotline, Facebook...
-        </div>
+        <Paper
+          elevation={0}
+          sx={{
+            border: "1px dashed",
+            borderColor: "divider",
+            py: 8,
+            textAlign: "center",
+            borderRadius: 3,
+          }}
+        >
+          <Typography sx={{
+            color: "text.secondary"
+          }}>
+            Chưa có link liên hệ. Thêm Zalo, Hotline, Facebook...
+          </Typography>
+        </Paper>
       ) : (
-        <div className="overflow-hidden rounded-xl border border-zinc-200 bg-white">
-          <table className="w-full text-left text-sm">
-            <thead className="border-b border-zinc-200 bg-zinc-50">
-              <tr>
-                <th className="px-4 py-3 font-medium">Tiêu đề</th>
-                <th className="px-4 py-3 font-medium">URL</th>
-                <th className="px-4 py-3 font-medium">Icon</th>
-                <th className="px-4 py-3 font-medium">Thứ tự</th>
-                <th className="px-4 py-3 font-medium">Trạng thái</th>
-                <th className="px-4 py-3 font-medium">Thao tác</th>
-              </tr>
-            </thead>
-            <tbody>
-              {(links as ContactLink[]).map((link) => (
-                <tr key={link.id} className="border-b border-zinc-100">
-                  <td className="px-4 py-3 font-medium">{link.title}</td>
-                  <td className="max-w-xs truncate px-4 py-3 text-zinc-600">
-                    {link.url}
-                  </td>
-                  <td className="px-4 py-3 capitalize">{link.icon}</td>
-                  <td className="px-4 py-3">{link.sort_order}</td>
-                  <td className="px-4 py-3">
-                    <span
-                      className={`rounded-full px-2 py-0.5 text-xs font-medium ${
-                        link.is_active
-                          ? "bg-emerald-100 text-emerald-700"
-                          : "bg-zinc-100 text-zinc-500"
-                      }`}
+        <>
+          <Paper
+            elevation={0}
+            sx={{ border: 1, borderColor: "divider", borderRadius: 3, overflow: "hidden" }}
+          >
+            <Table size="small">
+              <TableHead sx={{ bgcolor: "#F8FAFC" }}>
+                <TableRow>
+                  <TableCell>Tiêu đề</TableCell>
+                  <TableCell>URL</TableCell>
+                  <TableCell>Icon</TableCell>
+                  <TableCell>Thứ tự</TableCell>
+                  <TableCell>Trạng thái</TableCell>
+                  <TableCell>Thao tác</TableCell>
+                </TableRow>
+              </TableHead>
+              <TableBody>
+                {(links as ContactLink[]).map((link) => (
+                  <TableRow key={link.id} hover>
+                    <TableCell>
+                      <Typography sx={{
+                        fontWeight: 600
+                      }}>{link.title}</Typography>
+                    </TableCell>
+                    <TableCell
+                      sx={{
+                        maxWidth: 240,
+                        overflow: "hidden",
+                        textOverflow: "ellipsis",
+                        whiteSpace: "nowrap",
+                      }}
                     >
-                      {link.is_active ? "Hiển thị" : "Ẩn"}
-                    </span>
-                  </td>
-                  <td className="px-4 py-3">
-                    <div className="flex items-center gap-3">
-                      <Link
-                        href={`/admin/links/${link.id}/edit`}
-                        className="text-blue-600 hover:underline"
-                      >
-                        Sửa
-                      </Link>
-                      <DeleteButton table="contact_links" id={link.id} />
-                    </div>
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
+                      {link.url}
+                    </TableCell>
+                    <TableCell sx={{ textTransform: "capitalize" }}>
+                      {link.icon}
+                    </TableCell>
+                    <TableCell>{link.sort_order}</TableCell>
+                    <TableCell>
+                      <Chip
+                        size="small"
+                        label={link.is_active ? "Hiển thị" : "Ẩn"}
+                        color={link.is_active ? "success" : "default"}
+                      />
+                    </TableCell>
+                    <TableCell>
+                      <Stack direction="row" spacing={1} sx={{
+                        alignItems: "center"
+                      }}>
+                        <Link
+                          href={`/admin/links/${link.id}/edit`}
+                          style={{ textDecoration: "none" }}
+                        >
+                          <Button
+                            size="small"
+                            color="secondary"
+                            sx={{ minWidth: "auto", p: 0 }}
+                          >
+                            Sửa
+                          </Button>
+                        </Link>
+                        <DeleteButton table="contact_links" id={link.id} />
+                      </Stack>
+                    </TableCell>
+                  </TableRow>
+                ))}
+              </TableBody>
+            </Table>
+          </Paper>
+
+          {totalPages > 1 && (
+            <Box sx={{ mt: 3 }}>
+              <Pagination
+                currentPage={currentPage}
+                totalPages={totalPages}
+                basePath="/admin/links"
+              />
+            </Box>
+          )}
+        </>
       )}
-    </div>
+    </Box>
   );
 }

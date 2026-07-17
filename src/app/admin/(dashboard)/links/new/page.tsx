@@ -1,10 +1,18 @@
+import { Box, Typography } from "@mui/material";
 import { LinkForm } from "@/components/admin/LinkForm";
 
 export default function NewLinkPage() {
   return (
-    <div className="p-6 md:p-8">
-      <h1 className="mb-6 text-2xl font-bold">Thêm link liên hệ</h1>
+    <Box sx={{ p: { xs: 2, md: 4 } }}>
+      <Typography
+        variant="h5"
+        sx={{
+          fontWeight: 700,
+          mb: 3
+        }}>
+        Thêm link liên hệ
+      </Typography>
       <LinkForm />
-    </div>
+    </Box>
   );
 }
