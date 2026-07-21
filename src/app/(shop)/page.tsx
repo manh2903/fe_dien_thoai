@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import {
   Box,
   Container,
@@ -17,6 +18,50 @@ import { pickRandomFeedbacks } from "@/lib/feedbacks";
 import feedbacksData from "@/data/feedbacks.json";
 import type { Product, ContactLink } from "@/types/database";
 import type { Feedback } from "@/lib/feedbacks";
+
+export const metadata: Metadata = {
+  title: "PhoneShop - Cửa hàng điện thoại uy tín | iPhone mới & cũ",
+  description:
+    "Mua iPhone mới và iPhone cũ chính hãng tại PhoneShop. Giá tốt, bảo hành rõ ràng, giao nhanh, tư vấn tận tâm qua Zalo & Hotline.",
+  keywords: [
+    "PhoneShop",
+    "mua iPhone",
+    "iPhone chính hãng",
+    "iPhone cũ giá rẻ",
+    "iPhone 15",
+    "iPhone 16",
+    "cửa hàng điện thoại uy tín",
+  ],
+  openGraph: {
+    title: "PhoneShop - Cửa hàng điện thoại uy tín",
+    description:
+      "iPhone mới & cũ chính hãng, giá tốt, bảo hành rõ ràng. Xem ngay sản phẩm tại PhoneShop.",
+    url: "/",
+    type: "website",
+    images: [
+      {
+        url: "/hero.png",
+        width: 1200,
+        height: 630,
+        alt: "PhoneShop - Cửa hàng điện thoại uy tín",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "PhoneShop - Cửa hàng điện thoại uy tín",
+    description:
+      "iPhone mới & cũ chính hãng, giá tốt, bảo hành rõ ràng tại PhoneShop.",
+    images: ["/hero.png"],
+  },
+  alternates: {
+    canonical: "/",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
 
 const PAGE_SIZE = 12;
 
