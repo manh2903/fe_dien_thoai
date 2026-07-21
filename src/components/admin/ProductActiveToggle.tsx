@@ -50,7 +50,11 @@ export function ProductActiveToggle({ id, isActive }: ProductActiveToggleProps) 
           disabled={loading}
           onChange={(e) => handleToggle(e.target.checked)}
           color="success"
-          inputProps={{ "aria-label": active ? "Ẩn sản phẩm" : "Hiện sản phẩm" }}
+          slotProps={{
+            input: {
+              "aria-label": active ? "Ẩn sản phẩm" : "Hiện sản phẩm",
+            },
+          }}
         />
       </span>
     </Tooltip>
